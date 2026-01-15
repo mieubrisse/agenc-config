@@ -35,6 +35,43 @@ Apply these principles in order of priority:
 
 ---
 
+## Clarification Behavior Requirement
+
+Every upgraded prompt must include explicit instructions for the AI to seek clarification when facing ambiguity. Add a dedicated section or integrated guidance that directs the AI to:
+
+- **Identify Ambiguity** — Recognize when the user's request contains undefined terms, conflicting requirements, missing parameters, or underspecified success criteria
+- **Ask Before Acting** — When information is missing or ambiguous, prompt the AI to ask targeted clarifying questions rather than making assumptions
+- **Specify What Needs Clarification** — Direct the AI to explain specifically what is unclear and why it matters, not just ask generic questions
+- **Err Toward Asking** — When uncertain whether to ask or proceed, the AI should ask. The cost of a clarifying question is far lower than the cost of producing incorrect output based on faulty assumptions.
+
+Emphasize this principle: **Assumptions are dangerous.** An AI that asks one too many questions is far more useful than an AI that confidently produces wrong output. Instruct the AI to treat ambiguity as a signal to pause and verify rather than a gap to fill with guesses.
+
+Include phrasing such as: "If the request is ambiguous or missing information that affects correctness, ask specific clarifying questions before proceeding. State what is unclear and why it matters. Do not assume—ask."
+
+---
+
+## Verification and Validation Requirement
+
+Every upgraded prompt must include explicit self-verification instructions. Add a dedicated section that directs the AI to validate its own output before delivering it. Include guidance for:
+
+- **Requirement Matching** — Check that the output addresses every stated requirement from the user's request
+- **Constraint Compliance** — Verify the output adheres to all specified constraints, formats, and boundaries
+- **Completeness Check** — Confirm no requested elements are missing or incomplete
+- **Error Detection** — Scan for common mistakes, inconsistencies, or logical errors relevant to the task type
+- **Edge Case Consideration** — Verify handling of boundary conditions mentioned or implied in the request
+
+Structure verification instructions as a checklist or step-by-step process the AI performs internally before presenting output. Use language such as:
+
+"Before delivering your response, verify:
+- All stated requirements are addressed
+- Output conforms to specified format and constraints
+- No requested elements are missing
+- Content is internally consistent and error-free"
+
+For complex tasks, instruct the AI to include a brief verification summary showing which requirements were met, or to flag any requirements it could not fully satisfy.
+
+---
+
 ## Examples Section Requirement
 
 When upgrading a prompt, create a dedicated **Examples** section if any of the following apply:
@@ -78,6 +115,8 @@ Before finalizing, verify the upgraded prompt makes the following immediately cl
 | Failure | Does the AI know what mistakes to avoid? |
 | Format | Does the AI know exactly how to structure its response? |
 | Boundaries | Does the AI know what falls outside its scope? |
+| Clarification | Does the AI know to ask questions when information is missing or ambiguous? |
+| Verification | Does the AI know to validate its output before delivering it? |
 
 ---
 
