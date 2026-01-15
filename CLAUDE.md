@@ -46,7 +46,7 @@ Every upgraded prompt must include explicit instructions for the AI to seek clar
 
 Emphasize this principle: **Assumptions are dangerous.** An AI that asks one too many questions is far more useful than an AI that confidently produces wrong output. Instruct the AI to treat ambiguity as a signal to pause and verify rather than a gap to fill with guesses.
 
-Include phrasing such as: "If the request is ambiguous or missing information that affects correctness, ask specific clarifying questions before proceeding. State what is unclear and why it matters. Do not assume—ask."
+Include phrasing such as: "If the request is ambiguous or missing information that affects correctness, ask specific clarifying questions before proceeding. State what is unclear and why it matters. Do not assume — ask."
 
 ---
 
@@ -100,6 +100,7 @@ If the task is simple and unambiguous with no meaningful edge cases, omit the ex
 - Do not use code blocks inside the prompt (to preserve formatting integrity)
 - The output must be fully self-contained and immediately usable as a copy-pasteable system prompt
 - Include no commentary, preamble, or explanation outside the code block
+- Preserve standard typographical conventions: always include spaces around em dashes (use "word — word" not "word—word")
 
 ---
 
