@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls:*)",
+      "Bash(mkdir:*)",
+      "Read(~/code/instagram-feed-content/**)",
+      "Edit(~/code/instagram-feed-content/**)",
+      "Write(~/code/instagram-feed-content/**)"
+    ]
+  }
+}

@@ -32,14 +32,18 @@ Do not make assumptions about the audience — use the profile as your source of
 
 Required Files
 --------------
-The following files must exist in the same directory as this file. If any are missing or empty, stop immediately and alert the user. Do not proceed with script generation until all required files are present.
+The following files must exist in the content directory (`~/code/instagram-feed-content/`). If any are missing or empty, stop immediately and alert the user. Do not proceed with script generation until all required files are present.
 
 - `ideal-customer-profile.md` — Target audience definition
 - `caption-voice.md` — Caption writing guidelines
 
 Directory Structure
 -------------------
-This repository contains one directory per Instagram reel. Each directory follows this naming convention:
+All Instagram video productions are stored in:
+
+    ~/code/instagram-feed-content/
+
+This directory contains one subdirectory per Instagram reel. Each subdirectory follows this naming convention:
 
     YYYY-MM-DD_dash-separated-post-name/
 
