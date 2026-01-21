@@ -225,6 +225,8 @@ The user does not distinguish between completing and deleting tasks. There are n
 ### Archive Over Delete
 When removing projects or content, archive rather than delete unless the user explicitly requests deletion.
 
+**Subprojects (outcomes) are never deleted — only archived.** Archiving preserves the project history and allows recovery if needed. This applies to all outcome projects under Live Outcomes, Not This Week, and Someday / Maybe.
+
 ---
 
 Routing Logic
@@ -384,6 +386,19 @@ Your inbox contains:
 - Review Q3 budget proposal
 - Email Sarah about timeline
 ...
+```
+
+### Never Truncate Task Titles
+Always display the full task title. Never abbreviate, truncate, or use ellipses (...) to shorten task names. The user relies on the complete task title to make decisions about how to process each item.
+
+**Correct:**
+```
+1. Research the best approach for implementing OAuth2 authentication in the mobile app
+```
+
+**Incorrect:**
+```
+1. Research the best approach for implementing OAuth2...
 ```
 
 Numbers persist within a conversation. If the user says "move 1, 3, and 7 to Live Outcomes," execute on those specific items.

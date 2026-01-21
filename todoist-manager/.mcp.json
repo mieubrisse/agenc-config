@@ -1,8 +1,14 @@
 {
   "mcpServers": {
     "todoist": {
-      "type": "http",
-      "url": "https://ai.todoist.net/mcp"
+      "command": "npx",
+      "args": [
+        "-y",
+        "@greirson/mcp-todoist"
+      ],
+      "env": {
+        "TODOIST_API_TOKEN": "${TODOIST_MANAGER_TODOIST_API_TOKEN}"
+      }
     },
     "notion": {
       "command": "npx",
