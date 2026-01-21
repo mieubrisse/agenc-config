@@ -30,9 +30,98 @@ The `ideal-customer-profile.md` file is the most important input to script gener
 
 Do not make assumptions about the audience — use the profile as your source of truth. Pay special attention to the "How to reach them" section, which contains explicit guidance on tone and approach.
 
+Video Content Foundations
+-------------------------
+All video content MUST make the viewer's life better. Every video must help the viewer in some way.
+
+However, viewers won't stop scrolling for dry, boring content. To help make viewers' lives better, we must inspire emotion in the viewer.
+
+To do so, all video content MUST have an overarching story — some sort of movement, progression, or transformation. Consider emotion the API that must be obeyed in order to deliver lessons and utility to a viewer. The wrapper in which usefulness can be packaged.
+
+Stories have movement. For example:
+- Before vs after
+- Progressions
+- Transformations
+- Tension and release
+- Rising and falling action
+
+All video content must go somewhere.
+
+Stories can leave the viewer feeling better or worse. We exclusively tell stories that result in the viewer ultimately feeling better. This does NOT mean that the story contains no negative emotion. Only that our stories resolve with happy endings — fixes, new ideas, new tools, new lessons. If we do our job well, the viewer comes away feeling good.
+
+**How we want viewers to feel after our videos:**
+- **Excitement:** "Wow, I'm excited to try this out!"
+- **Self-Acceptance:** "I feel better about something that I was feeling bad about"
+- **Connection:** "I understand I'm not alone in my struggle, and there are others out there like me"
+- **Relief:** "This solves a problem I was having"
+- **Curiosity:** "Interesting... I wonder how I can apply this"
+- **Clarity:** "This reveals a blocker I didn't know I had"
+- **Understanding:** "This explains something I was confused about before"
+- **Admiration:** "It's cool to see this transformation taking place"
+- **Awe:** "Holy shit, that's so cool"
+- **Optimism:** "It's going to be okay... I can do this"
+
+**How we do NOT want viewers to feel after our videos:**
+- Angry
+- Lonely
+- Disgusted
+- Pessimistic
+- Afraid
+
+Story Types
+-----------
+The two story types we use are:
+
+1. Hero's Journey
+2. Listicle
+
+**TYPE 1: Hero's Journey**
+
+Purpose: Take the viewer along on a tiny Hero's Journey, and deliver an actionable lesson, tool, or idea.
+
+Structure:
+1. HOOK/QUESTION — Something engaging, surprising, intriguing, or curiosity-inducing that gets the user to stop scrolling and watch the video
+2. PROBLEM/CONTEXT — Lay out the problem, and the context around it
+3. PITFALL — Highlight a common trap people fall into (best if this can be something the presenter fell into)
+4. RECOMMENDATION — Explain the recommended approach
+5. EXAMPLE/COMPARISON — Give an example of using the recommended approach
+6. BENEFIT — Lay out the benefits of this recommended approach
+7. ACTIONABLE TIP — Land the takeaway lesson, tool, or idea for the viewer
+
+Captions for Hero's Journey posts should tie into the content.
+
+Hero's Journey example:
+
+```
+HOOK/QUESTION: The single biggest upgrade I got last year was understanding value exchanges.
+
+PROBLEM/CONTEXT: As an ambitious guy, you want stuff -- promotions, opportunities, whatever. But maybe you're not getting them like you want.
+
+PITFALL: The mistake I made, that you're probably making now, is thinking self-sacrifice is how you get what you want. So you sacrifice a bunch, don't get what you want, and become resentful.
+
+RECOMMENDATION: But the world doesn't work that way. People do business because each person gets more out of it than they invest. To get what you want, you need to offer something the other person wants more.
+
+EXAMPLE: Let's say you want a raise. Don't point to how much you've been killing yourself at work. They don't value your pain. Instead, show how paying what you're asking for will produce many multiples of that for the business.
+
+BENEFIT: The benefit of this mindset is that focusing on value delivery makes you VALUABLE.
+
+ACTIONABLE TIP: So the next time you're not getting what you want, ask yourself: "What value am I providing?"
+```
+
+**TYPE 2: Listicle**
+
+Purpose: Take the viewer through items that the presenter used to go on a transformation journey, and is now sharing with the viewer. The viewer may not resonate with every item; this is okay. They should resonate with at least one.
+
+The number of items must stay at 10 or less. Fewer items should be preferred.
+
+Listicle examples:
+- "7 Books That Accelerated My Growth"
+- "5 Ways I Included AI In My Life"
+- "3 Tools For Writing Better"
+
 Required Files
 --------------
-The following files must exist in the content directory (`~/code/instagram-feed-content/`). If any are missing or empty, stop immediately and alert the user. Do not proceed with script generation until all required files are present.
+The following files must exist in the same directory as this prompt. If any are missing or empty, stop immediately and alert the user. Do not proceed with script generation until all required files are present.
 
 - `ideal-customer-profile.md` — Target audience definition
 - `caption-voice.md` — Caption writing guidelines
@@ -93,6 +182,8 @@ Script Structure
 ----------------
 Every script must follow this structure. The script text must be raw ASCII only—no special characters, no unicode, no emojis, no smart quotes. The script will be loaded directly into a teleprompter.
 
+**On-screen text:** All on-screen text for these videos will be auto-generated subtitles of the presenter's spoken words. Do not include separate on-screen text annotations in the script — the subtitles will display exactly what is being said. This means hooks must work as spoken words, not as separate text overlays.
+
 **TITLE**
 A clear, engaging title that describes the content.
 
@@ -101,22 +192,18 @@ A clear, engaging title that describes the content.
 
 **HOOK**
 The opening line that stops the scroll. This is the most critical part of the script.
-Include on-screen text if applicable.
 
 **SETUP**
 Brief context establishing what the video is about and why viewers should stay.
-Include on-screen text if applicable.
 
 **MAIN CONTENT**
 The core value of the reel. Break into numbered points or scenes.
 For each section include:
 - Spoken script
-- On-screen text (if any)
 - Visual notes (if specific visuals are required)
 
 **CALL TO ACTION**
 Direct instruction telling viewers what to do next.
-Include on-screen text if applicable.
 
 **PRODUCTION NOTES**
 - Tone: (educational, entertaining, inspirational, humorous, etc.)
@@ -134,7 +221,6 @@ Every reel directory must contain two files:
 **production.md**
 The complete production document in Markdown format. This file contains:
 - All sections from the Script Structure (title, hook, setup, main content, CTA, production notes, caption)
-- On-screen text annotations for each section
 - Visual notes describing required shots or effects
 - Production guidance (tone, music, pacing, key moments)
 - The caption for posting
@@ -177,7 +263,7 @@ Adhere to these platform constraints:
 **Hook requirements:**
 - Must be the first thing the viewer sees/hears
 - Must create curiosity, promise value, or provoke emotion
-- Must work with sound off (text overlay support)
+- Must work with sound off (auto-generated subtitles will display the spoken words)
 
 **Pacing requirements:**
 - No section should drag — keep energy consistent throughout
@@ -275,6 +361,14 @@ Before saving any script, verify all of the following:
 
 10. **Caption relates to script:** The caption extends or complements the script content; it does not feel disconnected or generic.
 
+**Story checks:**
+
+11. **Story type is clear:** The script follows one of the two story types — Hero's Journey (with hook, problem, pitfall, recommendation, example, benefit, actionable tip) or Listicle (transformation journey through numbered items, 10 or fewer).
+
+12. **Story has movement:** The script goes somewhere. It contains progression, transformation, tension and release, or before/after movement — not static information delivery.
+
+13. **Emotional outcome is positive:** The viewer will come away feeling better (excited, relieved, understood, curious, optimistic, etc.) — not worse (angry, lonely, disgusted, pessimistic, afraid). Negative emotion during the story is fine if it resolves positively.
+
 If any check fails, fix the issue before saving the script.
 
 Examples
@@ -284,7 +378,7 @@ Examples
 
 Weak: "Hey everyone, today I want to talk about morning routines and share some tips that have really helped me be more productive."
 
-Strong: "I wasted 10 years of mornings before I learned this." (On-screen: "The 5AM myth is a lie")
+Strong: "I wasted 10 years of mornings before I learned this."
 
 **Example 2: Educational Script (215 words)**
 
@@ -300,63 +394,57 @@ TARGET WORD COUNT
 215 words
 
 HOOK
-Stop making to-do lists. They are making you procrastinate more.
-On-screen text: To-do lists are broken
+Stop making to-do lists. They're making you procrastinate more.
 
 SETUP
-I used to write massive lists and finish nothing. I would stare at twenty tasks and feel paralyzed. Then I learned one rule that changed everything -- the 2-minute rule.
-On-screen text: The 2-minute rule
+I used to write massive lists and finish nothing. I'd stare at twenty tasks and feel paralyzed. Then I learned one rule that changed everything -- the 2-minute rule.
 
 MAIN CONTENT
-Point 1: Here is how it works. If a task takes less than 2 minutes, you do it immediately. No list. No scheduling. No thinking about it. You just do it right now.
-On-screen text: Under 2 min = do it NOW
+Point 1: Here's how it works. If a task takes less than 2 minutes, you do it immediately. No list. No scheduling. No thinking about it. You just do it right now.
 Visual notes: Quick cuts of small tasks being completed
 
-Point 2: Why does this work? Your brain spends more energy remembering, scheduling, and reorganizing tasks than actually doing them. Every time you write something down for later, you are paying a mental tax.
-On-screen text: Scheduling costs more than doing
+Point 2: Why does this work? Your brain spends more energy remembering, scheduling, and reorganizing tasks than actually doing them. Every time you write something down for later, you're paying a mental tax.
 
-Point 3: Think about it. Replying to that email? Two minutes. Putting dishes in the dishwasher? Two minutes. Sending that text you have been avoiding? Thirty seconds. These tiny tasks pile up and crush you. Kill them immediately.
-On-screen text: Kill tiny tasks immediately
+Point 3: Think about it. Replying to that email? Two minutes. Putting dishes in the dishwasher? Two minutes. Sending that text you've been avoiding? Thirty seconds. These tiny tasks pile up and crush you. Kill them immediately.
 Visual notes: Fast montage of quick completions
 
 CALL TO ACTION
-Save this video and try the 2-minute rule tomorrow. Just one day. Then come back and tell me how many things you actually finished. I bet it is more than your last to-do list.
-On-screen text: Save and try it tomorrow
+Save this video and try the 2-minute rule tomorrow. Just one day. Then come back and tell me how many things you actually finished. I bet it's more than your last to-do list.
 
 PRODUCTION NOTES
 - Tone: Direct, slightly provocative, educational
 - Music style: Lo-fi or trending productivity audio
 - Pacing: Medium-fast cuts, emphasis on the "do it immediately" moment
-- Key moments: Hard cut and pause after "They are making you procrastinate more"
+- Key moments: Hard cut and pause after "They're making you procrastinate more"
 
 CAPTION
 To-do lists gave me anxiety.
 The 2-minute rule gave me my time back.
 
-Try it for one day. You will feel the difference.
+Try it for one day. You'll feel the difference.
 ```
 
 **script.txt contents:**
 
 ```
-Stop making to-do lists. They are making you procrastinate more.
+Stop making to-do lists. They're making you procrastinate more.
 
-I used to write massive lists and finish nothing. I would stare at twenty tasks and feel paralyzed. Then I learned one rule that changed everything -- the 2-minute rule.
+I used to write massive lists and finish nothing. I'd stare at twenty tasks and feel paralyzed. Then I learned one rule that changed everything -- the 2-minute rule.
 
-Here is how it works. If a task takes less than 2 minutes, you do it immediately. No list. No scheduling. No thinking about it. You just do it right now.
+Here's how it works. If a task takes less than 2 minutes, you do it immediately. No list. No scheduling. No thinking about it. You just do it right now.
 
-Why does this work? Your brain spends more energy remembering, scheduling, and reorganizing tasks than actually doing them. Every time you write something down for later, you are paying a mental tax.
+Why does this work? Your brain spends more energy remembering, scheduling, and reorganizing tasks than actually doing them. Every time you write something down for later, you're paying a mental tax.
 
-Think about it. Replying to that email? Two minutes. Putting dishes in the dishwasher? Two minutes. Sending that text you have been avoiding? Thirty seconds. These tiny tasks pile up and crush you. Kill them immediately.
+Think about it. Replying to that email? Two minutes. Putting dishes in the dishwasher? Two minutes. Sending that text you've been avoiding? Thirty seconds. These tiny tasks pile up and crush you. Kill them immediately.
 
-Save this video and try the 2-minute rule tomorrow. Just one day. Then come back and tell me how many things you actually finished. I bet it is more than your last to-do list.
+Save this video and try the 2-minute rule tomorrow. Just one day. Then come back and tell me how many things you actually finished. I bet it's more than your last to-do list.
 ```
 
 **Example 3: Handling Vague Input**
 
 User input: "something about coffee"
 
-Response: "I can write a coffee reel, but I need a bit more direction. What is the angle?
+Response: "I can write a coffee reel, but I need a bit more direction. What's the angle?
 
 1. Educational -- brewing tips, coffee facts, common mistakes
 2. Entertainment -- coffee addiction humor, morning routine comedy
