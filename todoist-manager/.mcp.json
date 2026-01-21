@@ -3,6 +3,16 @@
     "todoist": {
       "type": "http",
       "url": "https://ai.todoist.net/mcp"
+    },
+    "notion": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@notionhq/notion-mcp-server"
+      ],
+      "env": {
+        "NOTION_TOKEN": "${TODOIST_MANAGER_NOTION_TOKEN}"
+      }
     }
   }
 }

@@ -34,14 +34,23 @@ Todoist Structure
 The user's Todoist is organized into the following top-level projects. Do not create new top-level projects unless explicitly instructed.
 
 ### Inbox
-The universal capture point. Everything flows here first:
-- New tasks
+The user's **everything inbox** — a universal capture point where absolutely anything can go. Nothing is off-limits:
+- Tasks
 - Reminders
 - Ideas
 - Notes
+- Book notes
+- Random thoughts
 - Items converted from external inboxes (email, messages, etc.)
 
-Items in the Inbox are temporary. They should be processed into one of the other locations or done immediately.
+The user processes this inbox daily. Every item gets one of these treatments:
+- **Clarified** — turned into a properly formatted task or project
+- **Completed** — done immediately if quick
+- **Deferred** — scheduled for a future date or moved to a bucket
+- **Delegated** — assigned to someone else (with a `waiting-for` task if needed)
+- **Categorized elsewhere** — moved to Notion, Google Drive, or another system if it's not actionable
+
+Items in the Inbox are temporary. Expect the inbox to be emptied daily.
 
 ### Tickler
 Future reminders — things the user wants to see at a specific future date. Items here are scheduled using the task's Date field. Think of this as "show me this later" — GTD-style tickler items.
@@ -96,6 +105,73 @@ When promoting a task to a project (because it requires multiple steps), follow 
 
 The next action should be concrete and actionable — something the user could do in a single work session. If unclear what the first step is, ask: "What's the very first action you'd need to take to get started on this?"
 
+### Project IDs
+
+Use these IDs to reference projects directly without searching:
+
+| Project | ID |
+|---------|-----|
+| Someday / Maybe | `6Crcwv5gGpqx2Pm4` |
+| Content Notes To Categorize | `6cHcGVXg5cXhgcg2` |
+
+---
+
+Special Projects and Labels
+---------------------------
+
+### Daily Journalling Project
+The "Daily Journalling" project is a capture point for thoughts accumulated throughout the day. These entries are temporary — they get transferred to the user's nightly journal as part of their end-of-day routine. Treat this project as a scratchpad for fleeting thoughts, not as a task list.
+
+### Labels
+
+The user employs several labels with specific meanings:
+
+**`thoughtful-thursday`**
+Applied to reading and content consumption tasks that require significant time and attention — articles, videos, podcasts, or books that can't be consumed quickly. These items go in the Someday/Maybe project. The label indicates "save this for when I have dedicated time to engage thoughtfully."
+
+**`content`**
+Applied to ideas for content the user wants to create — blog posts, videos, articles, or other creative output. These items go in the Someday/Maybe project. The label distinguishes content creation ideas from content consumption tasks.
+
+**`waiting-for`**
+Applied to tasks where the user is waiting for someone else to take action. These tasks follow a special naming convention:
+
+- Task name starts with "WF" (Waiting For) abbreviation
+- Followed by the person's name and what they're doing
+- Example: "WF Dan to get back to me about trips"
+- Example: "WF Sarah to send the contract"
+
+The `waiting-for` label + "WF" prefix combination allows the user to quickly identify blocked tasks and follow up when needed.
+
+### Special-Purpose Projects
+
+**Compras no Supermercado/Groceries**
+This project holds grocery items. Tasks added here must be written in Brazilian Portuguese — this is not optional. The user uses this list while shopping in Brazil.
+
+**Next USA United States Trip TODO**
+Items added here are things the user will complete during their next trip to the United States. These tasks wait until the user travels, then get worked through during the trip.
+
+**Content Notes To Categorize**
+This project holds notes taken while listening to audiobooks. Tasks added here have specific requirements:
+
+- Grammar and spelling must be cleaned up (the user often captures these via voice, so raw input may be rough)
+- Each task must have a label indicating which book the note corresponds to
+- Book labels use kebab-case format: `title-author`
+- Example: `a-promised-land-barack-obama` corresponds to *A Promised Land* by Barack Obama
+
+These tasks are automatically picked up by automation, categorized into the corresponding book's notes page in Notion, and marked complete. The user does not manually process these — just add the cleaned-up note with the correct book label.
+
+**Batch pattern:** The user often adds book notes in batches during a listening session. If one inbox item is clearly a book note, the items immediately before and after it are likely book notes from the same book. Use this context when processing the inbox — recognizing one book note increases the probability that adjacent items are also book notes.
+
+**Determining the book label:** When processing book notes, query the "Reading List" database in Notion to see what the user is currently reading. This narrows down which book a note likely belongs to.
+
+- Notion datasource ID for Reading List: `2c26331c-894d-80fa-bbc1-000bc024c2f8`
+- First, filter for entries with status = "Reading"
+- If no matches found, also check status = "Done" (the user may have finished the book before processing inbox notes)
+
+**Missing labels:** If a likely book match is found in the Reading List but no corresponding Todoist label exists (in `title-author` kebab-case format), propose creating the label before processing the notes. Do not silently skip notes due to missing labels.
+
+**No match found:** If a task looks like a book note but cannot be matched to any book in "Reading" or "Done" status, ask the user for clarification. Do not guess or skip — the user can identify which book the note belongs to.
+
 ---
 
 Task and Project Conventions
@@ -132,11 +208,13 @@ The same rule applies to projects. A project name describes an outcome — a cha
 - "Senior engineer hire"
 
 ### Date Semantics
-- Task date = when the user wants to **see and work on** the task
-- Dates are **not deadlines**
+- The user schedules tasks by assigning a **Due Date** in Todoist
+- Due Date = when the user wants to **see and work on** the task
+- Tasks due today are scheduled to be done today
+- Due Dates are **not deadlines** — they represent scheduling intent, not hard cutoffs
 - The Today view represents the execution horizon — what the user intends to work on today
 
-When setting dates:
+When setting due dates:
 - If the user says "remind me on Friday" → set the date to Friday
 - If the user says "I want to work on this next week" → set the date to the appropriate day next week
 - If the user says "this is due Friday" → ask for clarification: "When do you want to start seeing this task? The day before? A week before?"
@@ -347,6 +425,31 @@ How would you like me to handle each group?
 ```
 
 This lets the user say things like "Schedule 1–4 for tomorrow, create projects for 5–7, put 8–10 in Tickler for the dates I mentioned, skip 11–13, and let me clarify 14–15."
+
+### Process One Chunk at a Time
+When processing a large inbox, handle similar items as a single chunk before moving to the next category. Do not present all categories at once — this overwhelms the user with too many decisions.
+
+**Preferred approach:**
+1. Identify one category of similar items (e.g., book notes)
+2. Present only those items for the user's feedback
+3. Execute the approved actions
+4. Move to the next category
+
+**Example — inbox with book notes and other items:**
+
+Instead of presenting book notes + quick tasks + potential projects all at once, handle the book notes first:
+
+```
+I found 8 items that look like book notes from "A Promised Land." Let me handle these first:
+
+1. "Leadership requires understanding..."
+2. "The importance of coalition building..."
+[etc.]
+
+I'll clean up the grammar, add the `a-promised-land-barack-obama` label, and move them to Content Notes To Categorize. Sound good?
+```
+
+After the user confirms and book notes are processed, move on to the next chunk (quick tasks, projects, etc.).
 
 ### Use the Bulk API for Atomicity
 Execute batch operations using the Todoist Bulk API rather than individual API calls. This provides:
