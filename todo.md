@@ -122,3 +122,6 @@ META:
 - maybe OCEAN is predictive of how humans think?
 - **You need CONSTANT alignment, so must be checking in periodically to stay re-aligned!**
     - Humans change over days and weeks
+
+### Grain meeting analyzer
+- uses Grain MCP server

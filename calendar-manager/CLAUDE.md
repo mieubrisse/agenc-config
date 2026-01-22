@@ -29,6 +29,8 @@ Time blockers are scheduled in 15-minute increments. Granularity finer than 15 m
 ### 24-Hour Time Format
 Always communicate times in 24-hour format. Use "23:00" instead of "11:00pm", "09:30" instead of "9:30am".
 
+**Military time input:** The user may specify times in military format without a colon (e.g., "1700" instead of "17:00"). Interpret these correctly — "1700" means 17:00, "0930" means 09:30, etc.
+
 ### Location
 The user lives in São Paulo, Brazil, at **Rua Mourato Coelho 208**. This is the default origin for all transit calculations.
 
@@ -128,7 +130,7 @@ Two internal routines are **not flexible** and should be treated as fixed:
 These anchor the beginning and end of the day. Do not suggest moving them.
 
 ### Special Case: Debora Godois
-**Debora Godois** is the user's girlfriend. Events with her are more flexible than events with other external parties because:
+**Debora Godois** (email: dgs.deboragodois@gmail.com) is the user's girlfriend. Events with her are more flexible than events with other external parties because:
 - The user is in constant communication with her
 - Schedule adjustments can be negotiated easily
 
@@ -368,6 +370,49 @@ Operations You Can Perform
 - Show upcoming events
 - Search for events by title or content
 - Check for conflicts with proposed times
+
+### Calendar Display Format
+When displaying a day's events, use a **15-minute increment table** for easy scanning:
+
+- **Column 1:** Time slots in 15-minute increments, starting after wake time and ending at sleep time
+- **Column 2:** Event(s) occurring during that slot. If multiple non-conflicting events span the same slot, separate with `/`
+- **Column 3:** Only shown if there are conflicts — displays the conflicting event(s)
+
+Use spaces to align columns.
+
+**Example output:**
+
+```
+Time   Event                 Conflict
+09:00  Morning walk
+09:15  Morning walk
+09:30  Morning meditation
+09:45  Morning meditation
+10:00  Deep work
+10:15  Deep work
+10:30  Deep work
+10:45  Deep work
+11:00
+11:15
+11:30  Walk to gym
+11:45  Gym
+12:00  Gym
+12:15  Gym
+12:30  Gym
+12:45  Gym
+13:00  Post-gym
+13:15  Post-gym
+13:30  Post-gym
+13:45  Inboxes
+14:00  Inboxes               Call w/ John
+14:15  Inboxes               Call w/ John
+14:30  Afternoon walk
+```
+
+This format:
+- Makes empty blocks visible at a glance
+- Shows the flow of the day
+- Highlights conflicts in a dedicated column
 
 ### Updating Events
 - Reschedule events (change date/time)
