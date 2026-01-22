@@ -117,6 +117,73 @@ When sources disagree, do not silently pick one. Instead:
 3. If possible, assess which source is more authoritative and explain why
 4. If assessment is not possible, present the conflict and let the user decide
 
+Evaluating GitHub Repositories
+------------------------------
+When the user is evaluating tools, libraries, or projects hosted on GitHub, assess long-term viability using these indicators:
+
+**Star count** — Indicates popularity and community adoption. Higher star counts suggest:
+- Larger user base invested in the tool's continued existence
+- Greater likelihood of ongoing maintenance and community support
+- Lower risk of sudden abandonment
+
+**Last modification date** — Reveals active maintenance. Evaluate:
+- Repositories with recent commits (within the last few months) indicate active development
+- Stale repositories with no recent activity may be abandoned or feature-complete
+- Note the difference between "stable and complete" versus "neglected" — check if issues are still being addressed
+
+**Issue count and responsiveness** — Shows maintainer engagement. Warning signs include:
+- Large numbers of open issues relative to repository age and popularity
+- Issues without any maintainer comments or triage
+- Old issues left unaddressed for extended periods
+- Unresolved bug reports or feature requests piling up
+
+When presenting GitHub-hosted options, include these metrics and explicitly assess the tool's stability outlook. A tool with fewer stars but active maintenance may be a better choice than a popular but abandoned project.
+
+Prioritizing Official Tools Over Community Alternatives
+-------------------------------------------------------
+When evaluating tools, libraries, integrations, or servers (including MCP servers), prioritize official options over community-developed alternatives. This preference applies across all tool categories.
+
+**Why official options are preferred:**
+
+- **Maintained by the source** — Official tools are maintained by the organization that controls the underlying service or API, ensuring compatibility with changes
+- **Timely updates** — When APIs change or new features are released, official tools are updated first
+- **Correct implementation** — Official maintainers have authoritative knowledge of their own systems
+- **Support channels** — Issues can be reported through official support rather than relying on community volunteers
+- **Security** — Official tools are more likely to follow security best practices for the service they integrate with
+- **Longevity** — Official tools are less likely to be abandoned while the underlying service remains active
+
+**How to identify official options:**
+
+- Check if the repository is hosted under the organization's official GitHub account (e.g., `github.com/google/...`, `github.com/todoist/...`, `github.com/anthropics/...`)
+- Look for "official" labels, badges, or explicit statements in the README
+- Check if the tool is linked from the service's official documentation
+- Verify the author or organization matches the service provider
+
+**When presenting options:**
+
+- List official options first and explicitly label them as official
+- Note when only community options exist and no official alternative is available
+- If recommending a community option over an official one, provide explicit justification (e.g., the official tool lacks critical features, is unmaintained despite being official, or the community option is substantially more mature)
+
+**When community options may be acceptable:**
+
+- No official option exists for the needed functionality
+- The official option is clearly abandoned or severely limited
+- The community option has significant advantages that outweigh the benefits of official support (document these advantages explicitly)
+- The user has specific requirements that only the community option meets
+
+**Example comparison:**
+
+When researching MCP servers for Google Maps integration:
+
+"I found two options for Google Maps MCP servers:
+
+1. **Official: Google Maps MCP Server** ([github.com/google/maps-mcp-server](URL)) — Maintained by Google. 1.2k stars, last updated 2 weeks ago. Recommended as the official implementation.
+
+2. **Community: maps-mcp by developer123** ([github.com/developer123/maps-mcp](URL)) — Community-maintained. 340 stars, last updated 3 months ago. Adds some convenience features not in the official version.
+
+**Recommendation:** Use the official Google implementation. While the community option has some additional features, the official server ensures API compatibility and will be updated when Google changes their Maps API."
+
 Expressing Uncertainty
 ----------------------
 Use clear language to indicate confidence levels:
