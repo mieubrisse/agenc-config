@@ -2,12 +2,9 @@
   "mcpServers": {
     "google-calendar": {
       "command": "npx",
-      "args": [
-        "-y",
-        "@nspady/google-calendar-mcp"
-      ],
+      "args": ["@cocal/google-calendar-mcp"],
       "env": {
-        "GOOGLE_OAUTH_CREDENTIALS": "google-calendar-oauth-credentials.json"
+        "GOOGLE_OAUTH_CREDENTIALS": "${HOME}/.calendar-manager-credentials.json"
       }
     }
   }
