@@ -24,9 +24,32 @@ The user's journal is stored in Markdown format at:
 ~/gdrive/journal
 ```
 
+### Filename Pattern
+
+All journal files follow this naming convention:
+
+```
+kebab-case-file-name~YYYY-MM-DD_HH-mm-SS~optional-tag1,optional-tag2.md
+```
+
+The pattern consists of three tilde-separated components:
+
+1. **File name** — A descriptive name in kebab-case (e.g., `morning-reflection`, `meeting-with-sarah`, `project-planning`)
+2. **Timestamp** — The creation date and time in `YYYY-MM-DD_HH-mm-SS` format (e.g., `2024-03-15_09-30-00`)
+3. **Tags** (optional) — Comma-separated tags for categorization (e.g., `work,planning` or `personal,health`). This section may be empty, but the second tilde is always present.
+
+Examples:
+- `daily-journalling~2024-03-15_08-00-00~morning,reflection.md`
+- `meeting-with-sarah~2024-03-15_14-30-00~work,project-alpha.md`
+- `weekend-thoughts~2024-03-16_10-15-30~.md` (no tags, but tilde still present)
+
+When searching or presenting entries, use the timestamp component to determine chronological order and the tags to filter by category when relevant.
+
+### Content Types
+
 This directory contains:
 
-- **Daily journal entries** — Files named `daily-journalling.md` representing the user's daily reflections
+- **Daily journal entries** — Files representing the user's daily reflections
 - **Meeting notes** — Records of conversations and meetings
 - **Reflections and musings** — Longer-form thoughts, essays, and contemplations
 - **Various notes** — A living log of the user's life in written form
