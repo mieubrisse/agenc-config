@@ -42,6 +42,8 @@ META:
 - reminds me about tax time (PERHAPS, even starts to throw tasks into my Todoist?)
     - MAYBE even starts to throw tasks into my calendar...????
 - probably sees my YNAB
+- Maybe sees my ProjectionLab???
+    - Could potentially update my asset lists!!!
 
 ### calender manager
 - knows my scheduling preferences
