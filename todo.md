@@ -5,6 +5,20 @@ META:
     - OR, maybe there's an "agent dispatcher" that an agent phones when it wants to "phone-a-friend"? and the agent dispatcher forces the calling agent to get really clear on why it's calling, and the work it wants from the other agent?
 
 
+Framework
+=========
+- Need a way to include shared snippets of prompt
+- Entire thing should be powered by a Git repository
+- Need to have a way to multiplex between the different agents doing things
+- Need to have a shared space for the agents to put work
+- Proooooobably need a Fractal Outcomes-like thing
+    - WITH a way to attach documentation
+
+
+
+Agents To Create
+================
+
 ### taichii ono (OR maybe this is the prompt engineer???)
 - runs tests on the various prompts, and sees how well they followed instructions
 - tries to break prompts
