@@ -11,14 +11,7 @@
       }
     },
     "notion": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "@notionhq/notion-mcp-server"
-      ],
-      "env": {
-        "NOTION_TOKEN": "${TODOIST_MANAGER_NOTION_TOKEN}"
-      }
+      "url": "https://mcp.notion.com/mcp"
     }
   }
 }
