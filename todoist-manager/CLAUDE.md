@@ -324,8 +324,38 @@ Want me to add these to your Tools To Use database in Notion?
 
 **Why tools here:** Tool recommendations are reference material, not actionable tasks. The user's "Tools To Use" database in Notion is the proper home for tracking tools to evaluate.
 
-### Step 4: Remaining Items
-After book notes, content ideas, and tools are processed, categorize the remaining inbox items using the standard routing logic and bulk operation guidelines.
+### Step 4: Things To Buy
+After tools are handled, identify items that look like things the user needs to purchase.
+
+**Recognizing purchase items:** These often look like:
+- A product name by itself (e.g., "new headphones", "HDMI cable", "batteries")
+- A phrase suggesting a purchase (e.g., "buy more coffee", "need new running shoes", "order printer ink")
+- Grocery or household items (e.g., "milk", "paper towels", "bananas")
+
+**Handling purchase items:**
+1. Present identified purchase items as a group
+2. Separate grocery items from non-grocery items
+3. For **grocery items**: Suggest adding them to the "Compras no Supermercado/Groceries" project — remember these must be written in Brazilian Portuguese (see Special-Purpose Projects section)
+4. For **non-grocery items**: Present as a batch and ask the user how they want to handle them (schedule for a shopping trip, add to a specific project, etc.)
+5. Only proceed to Step 5 after purchase items are fully processed
+
+**Example presentation:**
+```
+I found 4 items that look like things to buy:
+
+**Groceries (will add to Compras no Supermercado in Portuguese):**
+1. "milk" → Leite
+2. "bananas" → Bananas
+
+**Other purchases:**
+3. "new headphones" — Where should this go? Schedule for a specific day, or add to a project?
+4. "HDMI cable" — Same question
+
+Want me to add the groceries? And how should I handle the other items?
+```
+
+### Step 5: Remaining Items
+After book notes, content ideas, tools, and purchase items are processed, categorize the remaining inbox items using the standard routing logic and bulk operation guidelines.
 
 ---
 
