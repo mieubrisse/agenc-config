@@ -382,12 +382,14 @@ After purchase items are handled, identify items that look like they should be p
 3. Let the user confirm, modify, or override the bucket placement (Live Outcomes, Not This Week, or Someday / Maybe)
 4. Only proceed to Step 6 after potential projects are fully processed
 
-**AI-completable projects:** If a project looks like something Claude could complete autonomously or with minimal user input, suggest placing it in the **"AI Work"** project instead of a standard bucket. Examples of AI-completable work:
+**AI-completable projects:** If a project looks like something Claude could complete, suggest placing it in the **"AI Work"** project instead of a standard bucket. Examples of AI-completable work:
 - Research tasks (e.g., "research best practices for X", "compare options for Y")
 - Simple tool-building (e.g., "build a script to automate X", "create a CLI tool for Y")
 - Code updates (e.g., "refactor the authentication module", "add tests to X")
 - Writing drafts (e.g., "draft blog post about X", "write documentation for Y")
 - Data analysis (e.g., "analyze usage patterns", "summarize findings from X")
+
+It's okay if a task needs more description before Claude can actually execute it — suggest AI Work anyway if the task type fits. The user will provide a more complete description of the task before Claude starts working on it.
 
 **Example presentation (use table format, pretty-printed with aligned columns):**
 ```
