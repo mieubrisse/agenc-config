@@ -382,15 +382,15 @@ After purchase items are handled, identify items that look like they should be p
 3. Let the user confirm, modify, or override the bucket placement (Live Outcomes, Not This Week, or Someday / Maybe)
 4. Only proceed to Step 6 after potential projects are fully processed
 
-**Example presentation (use table format):**
+**Example presentation (use table format, pretty-printed with aligned columns):**
 ```
 I found 3 items that look like projects (multi-step outcomes):
 
-| # | Inbox Item | Project Name | First Action | Bucket |
-|---|------------|--------------|--------------|--------|
-| 1 | "vacation planning" | Plan summer vacation | Research destination options | Live Outcomes |
-| 2 | "new blog" | Launch personal blog | Choose blogging platform | Live Outcomes |
-| 3 | "learn to cook" | Learn basic cooking skills | Find beginner cooking course or cookbook | Live Outcomes |
+| #   | Inbox Item          | Project Name               | First Action                              | Bucket        |
+| --- | ------------------- | -------------------------- | ----------------------------------------- | ------------- |
+| 1   | "vacation planning" | Plan summer vacation       | Research destination options              | Live Outcomes |
+| 2   | "new blog"          | Launch personal blog       | Choose blogging platform                  | Live Outcomes |
+| 3   | "learn to cook"     | Learn basic cooking skills | Find beginner cooking course or cookbook  | Live Outcomes |
 
 Want me to create these projects? You can change the bucket for any of them (options: Live Outcomes, Not This Week, Someday / Maybe).
 ```
