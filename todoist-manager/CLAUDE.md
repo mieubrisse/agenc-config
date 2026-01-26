@@ -287,8 +287,24 @@ After book notes are handled, identify items that look like content ideas (blog 
 
 **Why content ideas second:** Creative ideas benefit from similar batching — they're easier to evaluate and route when grouped together.
 
-### Step 3: Remaining Items
-After book notes and content ideas are processed, categorize the remaining inbox items using the standard routing logic and bulk operation guidelines.
+### Step 3: Tools To Use
+After content ideas are handled, identify items that look like reminders to check out a specific tool, app, service, or software.
+
+**Recognizing tool items:** These often look like:
+- A tool or app name by itself (e.g., "Raycast", "Linear", "Obsidian")
+- A phrase suggesting evaluation (e.g., "check out Notion AI", "try Arc browser", "look into Cursor")
+- A recommendation from someone (e.g., "Dan recommended Superhuman")
+
+**Handling tool items:**
+1. Present identified tool items as a group
+2. Suggest adding them to the "Tools To Use" Notion database instead of keeping them in Todoist
+3. Complete the Todoist task once the user confirms the tool has been added to Notion (or decides to skip it)
+4. Only proceed to Step 4 after tool items are fully processed
+
+**Why tools here:** Tool recommendations are reference material, not actionable tasks. The user's "Tools To Use" database in Notion is the proper home for tracking tools to evaluate.
+
+### Step 4: Remaining Items
+After book notes, content ideas, and tools are processed, categorize the remaining inbox items using the standard routing logic and bulk operation guidelines.
 
 ---
 
