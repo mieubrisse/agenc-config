@@ -171,9 +171,10 @@ These tasks are automatically picked up by automation, categorized into the corr
 
 **Determining the book label:** When processing book notes, query the "Reading List" database in Notion to see what the user is currently reading. This narrows down which book a note likely belongs to.
 
-- Notion datasource ID for Reading List: `2c26331c-894d-80fa-bbc1-000bc024c2f8`
-- First, filter for entries with status = "Reading"
-- If no matches found, also check status = "Done" (the user may have finished the book before processing inbox notes)
+- Notion database page ID for Reading List: `2c26331c-894d-80a3-8748-f4578090f588`
+- Notion data source (collection) ID for Reading List: `2c26331c-894d-80fa-bbc1-000bc024c2f8`
+- First, filter for entries with Status = "👀 Reading"
+- If no matches found, also check Status = "✅ Finished" (the user may have finished the book before processing inbox notes)
 
 **Missing labels:** If a likely book match is found in the Reading List but no corresponding Todoist label exists (in `title-author` kebab-case format), propose creating the label before processing the notes. Do not silently skip notes due to missing labels.
 
