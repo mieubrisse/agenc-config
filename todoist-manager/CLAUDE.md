@@ -265,29 +265,41 @@ When processing items from the Inbox, route them according to this logic:
 
 Inbox Processing
 ----------------
-When the user asks to process their inbox, follow this structured flow. Handle each category as a chunk — get user confirmation before moving to the next step.
+When the user asks to process their inbox, follow this structured flow. Handle each category as a chunk — get user confirmation before moving to the next step (unless noted otherwise).
 
-### Step 1: Book Notes
-**Always start here.** Scan the entire inbox for items that look like book notes (fragments of ideas, quotes, concepts — often rough due to voice capture).
+### Step 1: Thoughtful Thursday Items (Auto-Process)
+**Start here — process silently without user confirmation.** Scan the inbox for any items already labeled with `thoughtful-thursday`.
+
+1. Identify all items with the `thoughtful-thursday` label
+2. Automatically move them to the **Someday / Maybe** project
+3. Do not present these to the user — just process them silently
+4. Proceed to Step 2
+
+**Exception:** If a thoughtful-thursday item is literal nonsense (completely unintelligible, not just rough voice transcription), ask the user for clarification before moving it.
+
+**Why auto-process:** The user has already made the routing decision by applying the label. No further input is needed.
+
+### Step 2: Book Notes
+Scan the entire inbox for items that look like book notes (fragments of ideas, quotes, concepts — often rough due to voice capture).
 
 1. Query the Notion Reading List to identify what the user is currently reading (see "Content Notes To Categorize" section for details)
 2. Present all identified book notes as a group
 3. Propose the book label and offer to clean up grammar
 4. Move confirmed notes to Content Notes To Categorize
-5. Only proceed to Step 2 after book notes are fully processed
+5. Only proceed to Step 3 after book notes are fully processed
 
-**Why book notes first:** They're time-sensitive — the user's memory of the context fades quickly, and notes are most valuable when processed while the listening session is still fresh. They often arrive in batches, so processing them together ensures consistent labeling.
+**Why book notes early:** They're time-sensitive — the user's memory of the context fades quickly, and notes are most valuable when processed while the listening session is still fresh. They often arrive in batches, so processing them together ensures consistent labeling.
 
-### Step 2: Content Ideas
+### Step 3: Content Ideas
 After book notes are handled, identify items that look like content ideas (blog post topics, video concepts, article ideas, creative output plans).
 
 1. Present identified content ideas as a group
 2. Propose handling them using the `content` label flow (see Labels section)
-3. Only proceed to Step 3 after content ideas are fully processed
+3. Only proceed to Step 4 after content ideas are fully processed
 
 **Why content ideas second:** Creative ideas benefit from similar batching — they're easier to evaluate and route when grouped together.
 
-### Step 3: Tools To Use
+### Step 4: Tools To Use
 After content ideas are handled, identify items that look like reminders to check out a specific tool, app, service, or software.
 
 **Recognizing tool items:** These often look like:
@@ -303,7 +315,7 @@ After content ideas are handled, identify items that look like reminders to chec
    - **URL:** The tool's website or landing page
 3. Suggest adding them to the "Tools To Use" Notion database instead of keeping them in Todoist
 4. Complete the Todoist task once the user confirms the tool has been added to Notion (or decides to skip it)
-5. Only proceed to Step 4 after tool items are fully processed
+5. Only proceed to Step 5 after tool items are fully processed
 
 **Example presentation:**
 ```
@@ -324,7 +336,7 @@ Want me to add these to your Tools To Use database in Notion?
 
 **Why tools here:** Tool recommendations are reference material, not actionable tasks. The user's "Tools To Use" database in Notion is the proper home for tracking tools to evaluate.
 
-### Step 4: Things To Buy
+### Step 5: Things To Buy
 After tools are handled, identify items that look like things the user needs to purchase.
 
 **Recognizing purchase items:** These often look like:
@@ -338,7 +350,7 @@ After tools are handled, identify items that look like things the user needs to 
 3. For **grocery items**: Suggest adding them to the "Compras no Supermercado/Groceries" project — remember these must be written in Brazilian Portuguese (see Special-Purpose Projects section)
 4. For **US-only items**: Suggest adding them to the "Next USA United States Trip TODO" project
 5. For **other purchases**: Present as a batch and ask the user how they want to handle them (schedule for a shopping trip, add to a specific project, etc.)
-6. Only proceed to Step 5 after purchase items are fully processed
+6. Only proceed to Step 6 after purchase items are fully processed
 
 **US-only items:** Some products are only available (or much easier to find) in the United States:
 - Speed Stick deodorant
@@ -358,7 +370,7 @@ I found 4 items that look like things to buy:
 Want me to add the groceries? And how should I handle the other items?
 ```
 
-### Step 5: Potential Projects
+### Step 6: Potential Projects
 After purchase items are handled, identify items that look like they should be projects rather than simple tasks.
 
 **Recognizing potential projects:** These are items that:
@@ -380,7 +392,7 @@ After purchase items are handled, identify items that look like they should be p
    - A proposed first next action (the very first step to get started)
    - Default placement in **Live Outcomes** (but offer alternatives)
 3. Let the user confirm, modify, or override the bucket placement (Live Outcomes, Not This Week, or Someday / Maybe)
-4. Only proceed to Step 6 after potential projects are fully processed
+4. Only proceed to Step 7 after potential projects are fully processed
 
 **AI-completable projects:** If a project looks like something Claude could complete, suggest placing it in the **"AI Work"** project instead of a standard bucket. Examples of AI-completable work:
 - Research tasks (e.g., "research best practices for X", "compare options for Y")
@@ -405,8 +417,8 @@ I found 4 items that look like projects (multi-step outcomes):
 Want me to create these projects? You can change the bucket for any of them (options: Live Outcomes, Not This Week, Someday / Maybe, AI Work).
 ```
 
-### Step 6: Remaining Items
-After book notes, content ideas, tools, purchase items, and potential projects are processed, categorize the remaining inbox items using the standard routing logic and bulk operation guidelines.
+### Step 7: Remaining Items
+After all previous steps are processed, categorize the remaining inbox items using the standard routing logic and bulk operation guidelines.
 
 ---
 
