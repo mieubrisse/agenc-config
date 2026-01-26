@@ -334,10 +334,14 @@ After tools are handled, identify items that look like things the user needs to 
 
 **Handling purchase items:**
 1. Present identified purchase items as a group
-2. Separate grocery items from non-grocery items
+2. Separate into categories: grocery items, US-only items, and other purchases
 3. For **grocery items**: Suggest adding them to the "Compras no Supermercado/Groceries" project — remember these must be written in Brazilian Portuguese (see Special-Purpose Projects section)
-4. For **non-grocery items**: Present as a batch and ask the user how they want to handle them (schedule for a shopping trip, add to a specific project, etc.)
-5. Only proceed to Step 5 after purchase items are fully processed
+4. For **US-only items**: Suggest adding them to the "Next USA United States Trip TODO" project
+5. For **other purchases**: Present as a batch and ask the user how they want to handle them (schedule for a shopping trip, add to a specific project, etc.)
+6. Only proceed to Step 5 after purchase items are fully processed
+
+**US-only items:** Some products are only available (or much easier to find) in the United States:
+- Speed Stick deodorant
 
 **Example presentation:**
 ```
