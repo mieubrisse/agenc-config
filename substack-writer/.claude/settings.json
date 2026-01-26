@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git *)",
+      "Read(~/code/personal-writing/**)",
+      "Edit(~/code/personal-writing/**)",
+      "Write(~/code/personal-writing/**)",
+      "Glob(~/code/personal-writing/**)",
+      "Grep(~/code/personal-writing/**)"
+    ]
+  }
+}
