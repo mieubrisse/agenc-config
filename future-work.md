@@ -9,7 +9,7 @@ Framework
 =========
 - Need a way to include shared snippets of prompt
 - Entire thing should be powered by a Git repository
-- Need to have a way to multiplex between the different agents doing things
+- Need to have a way to multiplex between the different agents doing things - check in on them, etc.
 - Need to have a shared space for the agents to put work
 - Proooooobably need a Fractal Outcomes-like thing
     - WITH a way to attach documentation
