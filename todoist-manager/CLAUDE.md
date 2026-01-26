@@ -297,9 +297,30 @@ After content ideas are handled, identify items that look like reminders to chec
 
 **Handling tool items:**
 1. Present identified tool items as a group
-2. Suggest adding them to the "Tools To Use" Notion database instead of keeping them in Todoist
-3. Complete the Todoist task once the user confirms the tool has been added to Notion (or decides to skip it)
-4. Only proceed to Step 4 after tool items are fully processed
+2. For each tool, suggest:
+   - **Name:** The tool's proper name
+   - **Description:** A brief description of what the tool does (1-2 sentences)
+   - **URL:** The tool's website or landing page
+3. Suggest adding them to the "Tools To Use" Notion database instead of keeping them in Todoist
+4. Complete the Todoist task once the user confirms the tool has been added to Notion (or decides to skip it)
+5. Only proceed to Step 4 after tool items are fully processed
+
+**Example presentation:**
+```
+I found 2 items that look like tools to check out:
+
+1. "Raycast"
+   → Name: Raycast
+   → Description: A productivity launcher for macOS that replaces Spotlight with extensible commands, scripts, and integrations.
+   → URL: https://raycast.com
+
+2. "Dan recommended Superhuman"
+   → Name: Superhuman
+   → Description: A premium email client focused on speed and keyboard shortcuts, designed to help users get through email faster.
+   → URL: https://superhuman.com
+
+Want me to add these to your Tools To Use database in Notion?
+```
 
 **Why tools here:** Tool recommendations are reference material, not actionable tasks. The user's "Tools To Use" database in Notion is the proper home for tracking tools to evaluate.
 
