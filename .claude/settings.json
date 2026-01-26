@@ -6,10 +6,6 @@
             "Write(~/code/ai-work-factory/**)",
             "Glob(~/code/ai-work-factory/**)",
             "Grep(~/code/ai-work-factory/**)",
-            "Bash(git status:*)",
-            "Bash(git diff:*)",
-            "Bash(git add:*)",
-            "Bash(git commit -m *)",
             "Read(~/.gitconfig)"
         ],
         "deny": [
