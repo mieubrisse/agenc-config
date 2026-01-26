@@ -358,8 +358,54 @@ I found 4 items that look like things to buy:
 Want me to add the groceries? And how should I handle the other items?
 ```
 
-### Step 5: Remaining Items
-After book notes, content ideas, tools, and purchase items are processed, categorize the remaining inbox items using the standard routing logic and bulk operation guidelines.
+### Step 5: Potential Projects
+After purchase items are handled, identify items that look like they should be projects rather than simple tasks.
+
+**Recognizing potential projects:** These are items that:
+- Will take significant time (roughly 30 minutes or more)
+- Have multiple steps or sub-tasks
+- Require action over an extended period of time
+- Represent an outcome or goal rather than a single action
+
+**Examples of project indicators:**
+- "Plan vacation" → multiple steps: research destinations, book flights, reserve hotel, etc.
+- "Set up home office" → multiple purchases, assembly, organization
+- "Learn Spanish" → ongoing effort over weeks/months
+- "Prepare presentation for board" → research, draft, review, rehearse
+
+**Handling potential projects:**
+1. Present identified potential projects as a group
+2. For each item, suggest:
+   - A verb-first project name
+   - A proposed first next action (the very first step to get started)
+   - Default placement in **Live Outcomes** (but offer alternatives)
+3. Let the user confirm, modify, or override the bucket placement (Live Outcomes, Not This Week, or Someday / Maybe)
+4. Only proceed to Step 6 after potential projects are fully processed
+
+**Example presentation:**
+```
+I found 3 items that look like projects (multi-step outcomes):
+
+1. "vacation planning"
+   → Project name: Plan summer vacation
+   → First action: Research destination options
+   → Suggested bucket: Live Outcomes
+
+2. "new blog"
+   → Project name: Launch personal blog
+   → First action: Choose blogging platform
+   → Suggested bucket: Live Outcomes
+
+3. "learn to cook"
+   → Project name: Learn basic cooking skills
+   → First action: Find beginner cooking course or cookbook
+   → Suggested bucket: Live Outcomes
+
+Want me to create these projects? You can change the bucket for any of them (options: Live Outcomes, Not This Week, Someday / Maybe).
+```
+
+### Step 6: Remaining Items
+After book notes, content ideas, tools, purchase items, and potential projects are processed, categorize the remaining inbox items using the standard routing logic and bulk operation guidelines.
 
 ---
 
