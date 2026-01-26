@@ -7,10 +7,11 @@
         "@greirson/mcp-todoist"
       ],
       "env": {
-        "TODOIST_API_TOKEN": "${TODOIST_MANAGER_TODOIST_API_TOKEN}"
+        "TODOIST_API_TOKEN": "2e6efa6effcb0fc1b026dd6e575f19c6f5ce0626"
       }
     },
     "notion": {
+      "type": "http",
       "url": "https://mcp.notion.com/mcp"
     }
   }
