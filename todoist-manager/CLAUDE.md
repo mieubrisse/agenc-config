@@ -262,6 +262,35 @@ When processing items from the Inbox, route them according to this logic:
 
 ---
 
+Inbox Processing
+----------------
+When the user asks to process their inbox, follow this structured flow. Handle each category as a chunk — get user confirmation before moving to the next step.
+
+### Step 1: Book Notes
+**Always start here.** Scan the entire inbox for items that look like book notes (fragments of ideas, quotes, concepts — often rough due to voice capture).
+
+1. Query the Notion Reading List to identify what the user is currently reading (see "Content Notes To Categorize" section for details)
+2. Present all identified book notes as a group
+3. Propose the book label and offer to clean up grammar
+4. Move confirmed notes to Content Notes To Categorize
+5. Only proceed to Step 2 after book notes are fully processed
+
+**Why book notes first:** They're time-sensitive — the user's memory of the context fades quickly, and notes are most valuable when processed while the listening session is still fresh. They often arrive in batches, so processing them together ensures consistent labeling.
+
+### Step 2: Content Ideas
+After book notes are handled, identify items that look like content ideas (blog post topics, video concepts, article ideas, creative output plans).
+
+1. Present identified content ideas as a group
+2. Propose handling them using the `content` label flow (see Labels section)
+3. Only proceed to Step 3 after content ideas are fully processed
+
+**Why content ideas second:** Creative ideas benefit from similar batching — they're easier to evaluate and route when grouped together.
+
+### Step 3: Remaining Items
+After book notes and content ideas are processed, categorize the remaining inbox items using the standard routing logic and bulk operation guidelines.
+
+---
+
 Operations You Can Perform
 --------------------------
 
@@ -477,29 +506,15 @@ How would you like me to handle each group?
 This lets the user say things like "Schedule 1–4 for tomorrow, create projects for 5–7, put 8–10 in Tickler for the dates I mentioned, skip 11–13, and let me clarify 14–15."
 
 ### Process One Chunk at a Time
-When processing a large inbox, handle similar items as a single chunk before moving to the next category. Do not present all categories at once — this overwhelms the user with too many decisions.
+When processing many items, handle similar items as a single chunk before moving to the next category. Do not present all categories at once — this overwhelms the user with too many decisions.
 
 **Preferred approach:**
-1. Identify one category of similar items (e.g., book notes)
+1. Identify one category of similar items
 2. Present only those items for the user's feedback
 3. Execute the approved actions
 4. Move to the next category
 
-**Example — inbox with book notes and other items:**
-
-Instead of presenting book notes + quick tasks + potential projects all at once, handle the book notes first:
-
-```
-I found 8 items that look like book notes from "A Promised Land." Let me handle these first:
-
-1. "Leadership requires understanding..."
-2. "The importance of coalition building..."
-[etc.]
-
-I'll clean up the grammar, add the `a-promised-land-barack-obama` label, and move them to Content Notes To Categorize. Sound good?
-```
-
-After the user confirms and book notes are processed, move on to the next chunk (quick tasks, projects, etc.).
+When processing the inbox specifically, follow the step-by-step flow defined in the "Inbox Processing" section.
 
 ### Use the Bulk API for Atomicity
 Execute batch operations using the Todoist Bulk API rather than individual API calls. This provides:
