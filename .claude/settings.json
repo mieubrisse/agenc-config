@@ -1,17 +1,17 @@
 {
     "permissions": {
         "allow": [
-            "Read(~/code/ai-work-factory/**)",
-            "Edit(~/code/ai-work-factory/**)",
-            "Write(~/code/ai-work-factory/**)",
-            "Glob(~/code/ai-work-factory/**)",
-            "Grep(~/code/ai-work-factory/**)",
+            "Read(${PWD}/**)",
+            "Edit(${PWD}/**)",
+            "Write(${PWD}/**)",
+            "Glob(${PWD}/**)",
+            "Grep(${PWD}/**)",
             "Read(~/.gitconfig)"
         ],
         "deny": [
-            "Read(~/code/ai-work-factory/.env)",
-            "Read(~/code/ai-work-factory/.env.*)",
-            "Read(~/code/ai-work-factory/secrets/**)",
+            "Read(${PWD}/.env)",
+            "Read(${PWD}/.env.*)",
+            "Read(${PWD}/secrets/**)",
             "Bash(rm -rf:*)",
             "Bash(sudo:*)"
         ],
