@@ -1,6 +1,7 @@
 {
   "enabledMcpjsonServers": [
-    "todoist"
+    "todoist",
+    "notion"
   ],
   "enableAllProjectMcpServers": true,
   "permissions": {
