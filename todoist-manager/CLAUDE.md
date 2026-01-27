@@ -97,12 +97,13 @@ These three top-level projects serve as containers for the user's outcomes. Each
 When promoting a task to a project (because it requires multiple steps), follow this process:
 
 1. **Choose the bucket:** Ask which time horizon applies, or default to Live Outcomes if not specified
-2. **Create the sub-project:** Add it under the chosen bucket with a verb-first name
-3. **Create a next action:** Every project must have at least one task representing the immediate next action — the very first step needed to start working on the outcome
+2. **Choose an emoji:** Select an emoji that represents the project's domain or theme (see "Every Project Starts With an Emoji + Verb" for guidance)
+3. **Create the sub-project:** Add it under the chosen bucket with an emoji + verb-first name
+4. **Create a next action:** Every project must have at least one task representing the immediate next action — the very first step needed to start working on the outcome
 
 **Example:**
 - User says: "Make 'plan vacation' into a project"
-- Create sub-project "Plan summer vacation" under Live Outcomes (default)
+- Create sub-project "✈️ Plan summer vacation" under Live Outcomes (default)
 - Create task "Research destination options" inside the project as the next action
 
 The next action should be concrete and actionable — something the user could do in a single work session. If unclear what the first step is, ask: "What's the very first action you'd need to take to get started on this?"
@@ -202,18 +203,23 @@ This is a **strict rule**. All tasks must begin with an action verb.
 
 If the user provides a task without a verb, add an appropriate verb. Common starting verbs include: Review, Create, Write, Send, Email, Call, Research, Decide, Plan, Fix, Update, Complete, Draft, Schedule, Prepare, Organize, Meet, Follow up, Check, Confirm.
 
-### Every Project Starts With a Verb
-The same rule applies to projects. A project name describes an outcome — a change in reality — which requires an action.
+### Every Project Starts With an Emoji + Verb
+Project names must begin with an appropriate emoji, followed by a space, then a verb-first title. The emoji provides visual identification and categorization at a glance. A project name describes an outcome — a change in reality — which requires an action.
+
+**Choosing the emoji:** Select an emoji that represents the project's domain, theme, or primary activity. The emoji should be immediately recognizable and help the user visually scan their project list.
 
 **Correct:**
-- "Launch new website"
-- "Plan summer vacation"
-- "Hire senior engineer"
+- "🌐 Launch new website"
+- "✈️ Plan summer vacation"
+- "👤 Hire senior engineer"
+- "🎉 Plan Q2 team offsite"
+- "📊 Prepare board presentation"
 
 **Incorrect:**
-- "New website"
-- "Summer vacation"
-- "Senior engineer hire"
+- "Launch new website" (no emoji)
+- "New website" (no emoji, no verb)
+- "🌐 New website" (has emoji but no verb)
+- "Summer vacation" (no emoji, no verb)
 
 ### Date Semantics
 - The user schedules tasks by assigning a **Due Date** in Todoist
@@ -407,12 +413,12 @@ It's okay if a task needs more description before Claude can actually execute it
 ```
 I found 4 items that look like projects (multi-step outcomes):
 
-| #   | Inbox Item              | Project Name                   | First Action                              | Bucket        |
-| --- | ----------------------- | ------------------------------ | ----------------------------------------- | ------------- |
-| 1   | "vacation planning"     | Plan summer vacation           | Research destination options              | Live Outcomes |
-| 2   | "new blog"              | Launch personal blog           | Choose blogging platform                  | Live Outcomes |
-| 3   | "learn to cook"         | Learn basic cooking skills     | Find beginner cooking course or cookbook  | Live Outcomes |
-| 4   | "research auth options" | Research authentication options| Survey current auth library landscape     | AI Work       |
+| #   | Inbox Item              | Project Name                      | First Action                              | Bucket        |
+| --- | ----------------------- | --------------------------------- | ----------------------------------------- | ------------- |
+| 1   | "vacation planning"     | ✈️ Plan summer vacation           | Research destination options              | Live Outcomes |
+| 2   | "new blog"              | ✍️ Launch personal blog           | Choose blogging platform                  | Live Outcomes |
+| 3   | "learn to cook"         | 🍳 Learn basic cooking skills     | Find beginner cooking course or cookbook  | Live Outcomes |
+| 4   | "research auth options" | 🔐 Research authentication options| Survey current auth library landscape     | AI Work       |
 
 Want me to create these projects? You can change the bucket for any of them (options: Live Outcomes, Not This Week, Someday / Maybe, AI Work).
 ```
@@ -435,7 +441,7 @@ Operations You Can Perform
 
 ### Creating Projects
 - Create new projects as sub-projects under the appropriate bucket (Live Outcomes, Not This Week, or Someday / Maybe)
-- Set project names (always starting with a verb)
+- Set project names (always starting with an appropriate emoji, then a verb — see "Every Project Starts With an Emoji + Verb")
 - Always create a next action task inside new projects — a project without a next action is incomplete
 
 ### Reading and Querying
@@ -613,9 +619,9 @@ I've grouped your 32 inbox items by type:
 4. Send thank-you note to Mike
 
 **Potential projects (multi-step outcomes):**
-5. Plan team offsite (venue, agenda, travel)
-6. Research new CRM system (evaluate, demo, decide)
-7. Prepare board presentation (draft, review, finalize)
+5. 🎉 Plan team offsite (venue, agenda, travel)
+6. 💼 Research new CRM system (evaluate, demo, decide)
+7. 📊 Prepare board presentation (draft, review, finalize)
 
 **Future reminders (Tickler candidates):**
 8. Renew passport (expires in 6 months)
@@ -734,7 +740,8 @@ Verification Checklist
 ----------------------
 Before executing any Todoist operation, verify:
 
-- [ ] **Verb check:** Does every task and project name start with a verb?
+- [ ] **Verb check:** Does every task name start with a verb?
+- [ ] **Emoji + verb check:** Does every project name start with an appropriate emoji followed by a verb?
 - [ ] **Placement check:** Is the item going to the correct location (Inbox, Tickler, Recurring, or appropriate bucket)?
 - [ ] **Date check:** If a date is set, does it represent when the user wants to see/work on the item (not a deadline)?
 - [ ] **Scope check:** Is this a task (single action) or project (multi-step outcome)? Is it correctly classified?
@@ -773,7 +780,7 @@ Examples
 
 **User:** "I want to start planning our team offsite for Q2"
 
-**Response:** I'll create a project for this. "Plan Q2 team offsite" — does that name work?
+**Response:** I'll create a project for this. "🎉 Plan Q2 team offsite" — does that name work?
 
 For placement:
 - When is the offsite? That helps determine which bucket.
@@ -792,9 +799,9 @@ Or something else?
 
 **User:** "Research venue options"
 
-**Action:** Create sub-project "Plan Q2 team offsite" under Not This Week, with task "Research venue options" inside.
+**Action:** Create sub-project "🎉 Plan Q2 team offsite" under Not This Week, with task "Research venue options" inside.
 
-**Response:** Done. Created "Plan Q2 team offsite" in Not This Week with "Research venue options" as your next action.
+**Response:** Done. Created "🎉 Plan Q2 team offsite" in Not This Week with "Research venue options" as your next action.
 
 ---
 
@@ -810,7 +817,7 @@ Or something else?
 
 **User:** "It's probably multi-step, open enrollment ends in December, I should start looking in November"
 
-**Response:** I'll create this as a project in Not This Week since you're starting in November. "Select health insurance plan for next year" — does that name capture it?
+**Response:** I'll create this as a project in Not This Week since you're starting in November. "🏥 Select health insurance plan for next year" — does that name capture it?
 
 What's the first action you'd take when you start? Maybe:
 - "Review current plan coverage and costs"
@@ -819,9 +826,9 @@ What's the first action you'd take when you start? Maybe:
 
 **User:** "Research available plan options works"
 
-**Action:** Create sub-project "Select health insurance plan for next year" under Not This Week, with task "Research available plan options" inside.
+**Action:** Create sub-project "🏥 Select health insurance plan for next year" under Not This Week, with task "Research available plan options" inside.
 
-**Response:** Done. Created "Select health insurance plan for next year" in Not This Week with "Research available plan options" as your next action. When November comes, you can move it to Live Outcomes.
+**Response:** Done. Created "🏥 Select health insurance plan for next year" in Not This Week with "Research available plan options" as your next action. When November comes, you can move it to Live Outcomes.
 
 ---
 
@@ -865,8 +872,8 @@ You have 18 items in your inbox. I've grouped them by type:
 4. "Expense report" → Submit expense report
 
 **Potential projects (multi-step):**
-5. "Team offsite planning" → Plan Q2 team offsite
-6. "New laptop setup" → Set up new laptop
+5. "Team offsite planning" → 🎉 Plan Q2 team offsite
+6. "New laptop setup" → 💻 Set up new laptop
 
 **Future reminders (Tickler):**
 7. "Renew domain — March" → Renew domain registration
@@ -896,8 +903,8 @@ How does this look? Any changes before I proceed?
 - Create task "Call dentist to reschedule" — date: tomorrow
 - Create task "Review PR #247" — date: tomorrow
 - Create task "Submit expense report" — date: tomorrow
-- Create project "Plan Q2 team offsite" under Live Outcomes
-- Create project "Set up new laptop" under Not This Week
+- Create project "🎉 Plan Q2 team offsite" under Live Outcomes
+- Create project "💻 Set up new laptop" under Not This Week
 - Create task "Renew domain registration" in Tickler — date: March 1
 - Create task "Buy birthday gift for Sarah" in Tickler — date: Feb 10
 - Create task "Review Q3 marketing budget" — date: tomorrow
