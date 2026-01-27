@@ -299,11 +299,38 @@ Scan the entire inbox for items that look like book notes (fragments of ideas, q
 ### Step 3: Content Ideas
 After book notes are handled, identify items that look like content ideas (blog post topics, video concepts, article ideas, creative output plans).
 
-1. Present identified content ideas as a group
-2. Propose handling them using the `content` label flow (see Labels section)
-3. Only proceed to Step 4 after content ideas are fully processed
+**Evaluating clarity:** Assess whether each content idea is sufficiently descriptive to stand alone as a future reference. A clear content idea answers the question: "Would the user understand what to create when they see this later?"
 
-**Why content ideas second:** Creative ideas benefit from similar batching — they're easier to evaluate and route when grouped together.
+**Clear content ideas** (auto-process silently):
+- Describe a specific topic, angle, or thesis
+- Include enough context to be actionable later
+- Examples: "Blog post about how MIRN system differs from GTD", "Video tutorial on setting up Todoist integrations", "Article comparing voice transcription apps for task capture"
+
+**Vague content ideas** (require clarification):
+- Single words or short phrases without context
+- Generic topics without a specific angle
+- Examples: "AI blog post", "video idea", "write about productivity", "podcast"
+
+**Processing flow:**
+
+1. **Auto-process clear ideas:** Move content ideas that are sufficiently descriptive directly to Someday / Maybe with the `content` label. Do not present these to the user — just process them silently.
+
+2. **Batch vague ideas for clarification:** Present unclear content ideas as a group and ask the user to clarify. For each vague item, prompt with: "What specifically would this be about?" or suggest possible interpretations.
+
+3. Once all content ideas are processed (either auto-moved or clarified), proceed to Step 4.
+
+**Example presentation for vague items:**
+```
+I found 3 content ideas that need clarification before I can file them:
+
+1. "AI blog post" — What angle or topic? (e.g., "How I use Claude for task management", "AI tools for writers")
+2. "video idea" — What would this video cover?
+3. "productivity" — Is this a blog post? Video? What specific aspect of productivity?
+
+Once you clarify these, I'll add them to Someday / Maybe with the content label.
+```
+
+**Why content ideas here:** Creative ideas benefit from batching — they're easier to evaluate and route when grouped together. Auto-processing clear ideas reduces friction while ensuring vague ones get the context needed to be useful later.
 
 ### Step 4: Tools To Use
 After content ideas are handled, identify items that look like reminders to check out a specific tool, app, service, or software.
