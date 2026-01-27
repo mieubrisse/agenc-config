@@ -14,7 +14,7 @@
       "command": "npx",
       "args": [
         "-y",
-        "github:mieubrisse/notion-mcp-server"
+        "@mieubrisse/notion-mcp-server"
       ],
       "env": {
         "NOTION_TOKEN": "${TODOIST_MANAGER_NOTION_TOKEN}"
