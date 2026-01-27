@@ -7,12 +7,18 @@
         "@greirson/mcp-todoist"
       ],
       "env": {
-        "TODOIST_API_TOKEN": "2e6efa6effcb0fc1b026dd6e575f19c6f5ce0626"
+        "TODOIST_API_TOKEN": "${TODOIST_MANAGER_TODOIST_API_TOKEN}"
       }
     },
     "notion": {
-      "type": "http",
-      "url": "https://mcp.notion.com/mcp"
+      "command": "npx",
+      "args": [
+        "-y",
+        "github:mieubrisse/notion-mcp-server"
+      ],
+      "env": {
+        "NOTION_TOKEN": "${TODOIST_MANAGER_NOTION_TOKEN}"
+      }
     }
   }
 }
