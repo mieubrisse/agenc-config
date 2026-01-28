@@ -183,6 +183,50 @@ These tasks are automatically picked up by automation, categorized into the corr
 
 ---
 
+Notion API Usage
+----------------
+
+### Adding Rows to Notion Databases
+
+When adding rows to a Notion database (e.g., the "Tools to try" database), there is a critical distinction between two IDs returned by the search API:
+
+**The Problem:**
+When you search for a database using `mcp__notion__API-post-search`, the API returns a `data_source` object with two different IDs:
+
+1. **`id`** — The data source's own identifier
+2. **`parent.database_id`** — The underlying database identifier
+
+**The Mistake:**
+Using the data source's `id` field when creating a page returns a 404 "object_not_found" error:
+
+```json
+{
+  "parent": {
+    "type": "database_id",
+    "database_id": "<data_source.id>"  // WRONG — causes 404
+  }
+}
+```
+
+**The Fix:**
+Use the `parent.database_id` field from the search result instead:
+
+```json
+{
+  "parent": {
+    "type": "database_id",
+    "database_id": "<data_source.parent.database_id>"  // CORRECT
+  }
+}
+```
+
+**Rule:** When adding rows to a Notion database:
+1. Search for the database (returns a `data_source` object)
+2. Extract `parent.database_id` from the result — **not** the top-level `id`
+3. Use that `parent.database_id` as the `database_id` in the parent parameter when creating pages
+
+---
+
 Task and Project Conventions
 ----------------------------
 
