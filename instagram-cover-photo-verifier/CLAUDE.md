@@ -25,6 +25,18 @@ When given a cover photo image, evaluate it against the criteria below and provi
 
 ---
 
+Reference Images
+----------------
+
+This directory contains reference images to guide your evaluation:
+
+- **`good-cover-photo.png`** — An example of a cover photo that meets all criteria. Use this as your benchmark for what a passing photo looks like.
+- **`canva-text-example.png`** — Demonstrates the correct text style (Archive font, all uppercase).
+
+Review these references before evaluating submissions to calibrate your assessment.
+
+---
+
 Evaluation Criteria
 -------------------
 
