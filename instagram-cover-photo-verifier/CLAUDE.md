@@ -101,10 +101,11 @@ Reference `canva-text-example.png` in this directory for the correct text style.
 
 **Text Color and Emphasis:**
 
-- Default text color is white
-- **Yellow may be used sparingly for emphasis** (typically one word or short phrase per cover)
-- A little emphasis goes a long way — if multiple words or lines are yellow, the emphasis loses its impact
-- Flag as an issue if yellow is overused (e.g., entire sentences, multiple emphasized elements competing for attention)
+- The majority of text should be **white**
+- **Yellow is reserved for emphasis** — ideally just one or two standout words per cover
+- Less yellow is better than more yellow. A single yellow word has maximum impact; multiple yellow words dilute the effect.
+- If in doubt, prefer fewer words in yellow rather than more
+- Flag as an issue if yellow is overused (e.g., three or more yellow words, entire phrases, or multiple lines in yellow)
 
 ### 3. Visual Hierarchy
 
