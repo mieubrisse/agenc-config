@@ -74,6 +74,15 @@ The photo MUST NOT project:
 | **Superiority** | Condescending expression, overly polished/untouchable appearance, distant or aloof gaze |
 | **Domination** | Power poses (hands on hips, wide stance), pointing at viewer, aggressive or intimidating expression |
 
+**Gaze Direction Preference:**
+
+- **Looking away from camera**: Slightly preferred. Creates a more candid, less "salesy" feel.
+- **Looking at camera**: Acceptable if the expression is warm, enthusiastic, and engaged.
+
+The goal is an Instagram grid with roughly **60% looking away / 40% looking at camera**. When scoring:
+- Do not penalize photos where the subject looks at the camera — both directions can score 8+
+- If the VA has submitted several recent photos with the subject looking at the camera, note in your feedback that the next photo should have the subject looking away to maintain grid variety
+
 ### 2. Text Formatting
 
 Verify ALL of the following:
