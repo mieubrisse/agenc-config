@@ -99,6 +99,13 @@ Reference `canva-text-example.png` in this directory for the correct text style.
 - Sans-serif
 - High visual impact
 
+**Text Color and Emphasis:**
+
+- Default text color is white
+- **Yellow may be used sparingly for emphasis** (typically one word or short phrase per cover)
+- A little emphasis goes a long way — if multiple words or lines are yellow, the emphasis loses its impact
+- Flag as an issue if yellow is overused (e.g., entire sentences, multiple emphasized elements competing for attention)
+
 ### 3. Visual Hierarchy
 
 Verify:
