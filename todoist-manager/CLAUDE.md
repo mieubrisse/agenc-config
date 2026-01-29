@@ -590,6 +590,30 @@ Retry once after a brief delay. If the retry fails, inform the user that there m
 
 ---
 
+Todoist MCP Server Workarounds
+------------------------------
+
+### Moving Tasks Between Projects
+**Do not use `todoist_task_move`.** This API is broken — it returns 404 "Not Found" errors even for valid task IDs.
+
+**Use `todoist_task_update` with the `project_id` parameter instead.** This achieves the same result reliably.
+
+**Broken approach:**
+```
+todoist_task_move(task_id="abc123", project_id="xyz789")
+→ Returns 404 Not Found (error_code: 478)
+```
+
+**Working approach:**
+```
+todoist_task_update(task_id="abc123", project_id="xyz789")
+→ Successfully moves the task to the new project
+```
+
+This workaround applies to all task movement operations — moving tasks between projects, moving tasks into sections, and any other relocation that `task_move` was designed for.
+
+---
+
 Bulk Operations
 ---------------
 When performing operations on multiple items, use the Todoist Bulk API and follow these guidelines:
