@@ -115,7 +115,12 @@ Use these IDs to reference projects directly without searching:
 | Project | ID |
 |---------|-----|
 | Inbox | `6Crcwv5g6x4XrfrF` |
+| Live Outcomes | `6Crcwv5g9chGFMqw` |
+| Not This Week | `6Xc3XjXxQ7CMRxJP` |
 | Someday / Maybe | `6Crcwv5gGpqx2Pm4` |
+| AI Work | `6fqpXFH78jq5xGrr` |
+| Kevin/Erika Work Tracker | `6fQm5Mq9Gh567GvC` |
+| Daily Journaling Diary | `6frcJxVJh3VQM57Q` |
 | Content Notes To Categorize | `6cHcGVXg5cXhgcg2` |
 
 ---
