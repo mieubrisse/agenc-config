@@ -6,6 +6,7 @@
   "enableAllProjectMcpServers": true,
   "permissions": {
     "allow": [
+      "mcp__notion__*",
       "mcp__todoist__todoist_task_create",
       "mcp__todoist__todoist_task_get",
       "mcp__todoist__todoist_task_update",
