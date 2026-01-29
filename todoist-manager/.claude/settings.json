@@ -7,31 +7,7 @@
   "permissions": {
     "allow": [
       "mcp__notion__*",
-      "mcp__todoist__todoist_task_create",
-      "mcp__todoist__todoist_task_get",
-      "mcp__todoist__todoist_task_update",
-      "mcp__todoist__todoist_task_complete",
-      "mcp__todoist__todoist_tasks_bulk_create",
-      "mcp__todoist__todoist_tasks_bulk_update",
-      "mcp__todoist__todoist_tasks_bulk_complete",
-      "mcp__todoist__todoist_project_get",
-      "mcp__todoist__todoist_project_create",
-      "mcp__todoist__todoist_section_get",
-      "mcp__todoist__todoist_section_create",
-      "mcp__todoist__todoist_comment_create",
-      "mcp__todoist__todoist_comment_get",
-      "mcp__todoist__todoist_label_get",
-      "mcp__todoist__todoist_label_create",
-      "mcp__todoist__todoist_label_update",
-      "mcp__todoist__todoist_label_stats",
-      "mcp__todoist__todoist_subtask_create",
-      "mcp__todoist__todoist_subtasks_bulk_create",
-      "mcp__todoist__todoist_task_convert_to_subtask",
-      "mcp__todoist__todoist_subtask_promote",
-      "mcp__todoist__todoist_task_hierarchy_get",
-      "mcp__todoist__todoist_test_connection",
-      "mcp__todoist__todoist_test_all_features",
-      "mcp__todoist__todoist_test_performance"
+      "mcp__todoist__*"
     ]
   }
 }
