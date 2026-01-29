@@ -617,6 +617,20 @@ todoist_task_update(task_id="abc123", project_id="xyz789")
 
 This workaround applies to all task movement operations — moving tasks between projects, moving tasks into sections, and any other relocation that `task_move` was designed for.
 
+### Recurring Tasks — Never Change the Date
+**Do not modify the due date on recurring tasks.** The MCP server cannot postpone a recurring task — any date change destroys the recurrence pattern and converts it to a one-time task.
+
+If the user asks to reschedule a recurring task:
+1. **Do not change the date** — explain that this would break the recurrence
+2. **Suggest alternatives:**
+   - Complete the task (it will automatically reschedule to the next occurrence)
+   - Ask the user to reschedule manually in the Todoist app, which preserves recurrence
+   - If they want to skip today's occurrence, complete it
+
+**Example:**
+- User: "Move 'Daily standup' to tomorrow"
+- Response: "This is a recurring task — changing its date would destroy the recurrence pattern. Would you like me to complete it instead? It will automatically reschedule to the next occurrence."
+
 ---
 
 Bulk Operations
