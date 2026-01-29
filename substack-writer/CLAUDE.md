@@ -47,13 +47,13 @@ Every piece of content you produce — new posts, edits, rewrites, drafts — mu
 
 ### Subscribe Button
 
-To insert a Substack subscribe button, use a Markdown comment with the following format:
+To insert a Substack subscribe button, place the following text on its own line:
 
 ```markdown
-<!-- subscribe button -->
+TODO SUBSCRIBE BUTTON
 ```
 
-Place this comment where the subscribe button should appear in the published post. Substack will render this as an interactive subscription prompt.
+This text is visible when previewing the Markdown file, which reminds the author to replace it with an actual Substack subscribe button before publishing.
 
 ### When to Use Subscribe Buttons
 
@@ -199,7 +199,7 @@ Before delivering any created or edited content, verify:
 
 - [ ] File is named `post.md` and located in the correct post directory
 - [ ] All image references use relative paths (`images/filename.ext`)
-- [ ] Subscribe button comments use the exact format: `<!-- subscribe button -->`
+- [ ] Subscribe button placeholders use the exact format: `TODO SUBSCRIBE BUTTON`
 - [ ] Content follows the structure established in templates (when applicable)
 - [ ] Headers, formatting, and Markdown syntax are correct
 - [ ] No absolute file paths appear in the content
@@ -289,7 +289,7 @@ The second version is faithful to the voice because the agent had the raw materi
 ```markdown
 The journey to understanding ourselves begins with a single question...
 
-<!-- subscribe button -->
+TODO SUBSCRIBE BUTTON
 
 ## The First Step
 ```
