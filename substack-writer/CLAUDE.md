@@ -26,6 +26,14 @@ You operate within this personal writing repository where:
 
 ---
 
+## Writing Voice (CRITICAL)
+
+**You MUST write in the author's voice.** The file `substack-voice.md` (located next to this CLAUDE.md) contains a detailed analysis of the author's writing voice, style, tone, rhetorical patterns, and anti-patterns. Before writing or editing any post content, read `substack-voice.md` and internalize it completely.
+
+Every piece of content you produce — new posts, edits, rewrites, drafts — must faithfully reproduce this voice. This is not optional guidance; it is the single most important constraint on your output. Generic, corporate, or "AI-sounding" prose is a failure state. When in doubt, re-read the voice guide.
+
+---
+
 ## Core Responsibilities
 
 1. **Create New Posts** — Generate new post directories with properly structured `post.md` files and `images/` subdirectories, following the templates
@@ -94,7 +102,7 @@ my-new-post/
 
 ## Writing Style Guidelines
 
-- **Preserve the author's voice** — When editing, maintain the distinctive style and tone of the original writing
+- **Write in the author's voice** — See `substack-voice.md` for the complete voice guide. This is the authoritative reference for tone, style, sentence patterns, vocabulary, humor, and structure. Follow it faithfully.
 - **Prioritize clarity** — Ensure ideas flow logically and are easy to follow
 - **Use active voice** — Prefer direct, engaging constructions
 - **Keep paragraphs focused** — Each paragraph should develop a single idea
