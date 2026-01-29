@@ -8,7 +8,8 @@
       "Glob(/Users/odyssey/code/personal-writing)",
       "Grep(/Users/odyssey/code/personal-writing)",
       "Write(/tmp/**)",
-      "Edit(/tmp/**)"
+      "Edit(/tmp/**)",
+      "Read(/tmp/personal-writing-recent/**)"
     ],
     "deny": [
       "Bash"
