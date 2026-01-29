@@ -3,11 +3,14 @@
     "allow": [
       "Read(**)",
       "Glob(**)",
-      "Grep(**)"
+      "Grep(**)",
+      "Read(/Users/odyssey/code/personal-writing)",
+      "Glob(/Users/odyssey/code/personal-writing)",
+      "Grep(/Users/odyssey/code/personal-writing)",
+      "Write(/tmp/**)",
+      "Edit(/tmp/**)"
     ],
     "deny": [
-      "Write(**)",
-      "Edit(**)",
       "Bash"
     ]
   }
