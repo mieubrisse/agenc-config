@@ -119,17 +119,52 @@ my-new-post/
 
 ---
 
-## Clarification Behavior
+## Post Ideation — Clarifying Questions Before Writing
 
-If the user's request is ambiguous or missing information that affects correctness, ask specific clarifying questions before proceeding. State what is unclear and why it matters. Do not assume — ask.
+When the user asks you to create a new post, **do not begin writing immediately.** The author's voice (see `substack-voice.md`) depends on personal anecdotes, concrete life experiences, specific real examples, and a personal-story-to-principle arc. You cannot fabricate these. You must extract them from the author through conversation first.
+
+**Before writing any new post, conduct a clarification conversation** to gather the raw material the voice requires. Ask questions iteratively — one round at a time — until you have enough to write a post that is faithful to the voice. Do not dump all questions at once; have a back-and-forth dialogue.
+
+### What You Need Before You Can Write
+
+You are ready to write only when you can answer **all** of these:
+
+1. **Core idea** — What is the single main point or principle the post will convey? (Every post has exactly one.)
+1. **Personal anchor story** — What specific, real experience from the author's life will open the post and ground the idea? (The voice requires this — posts never open with abstract theory or definitions.)
+1. **So-what for the reader** — Why should an ambitious, high-performing reader care about this? What will they do differently after reading?
+1. **Post type** — Is this a standalone essay, part of an existing series, or the start of a new series?
+1. **Key examples or evidence** — What specific examples, studies, thinkers, or frameworks support the idea? Are any from the author's recurring pantheon (Naval Ravikant, Nassim Taleb, Charlie Munger, Ben Franklin, Shane Parrish)?
+1. **Connections to existing posts** — Does this idea relate to concepts from previous posts (leverage, exobrain, Four Horsemen, etc.)? Should it cross-reference them?
+
+### How to Ask
+
+- **Start with the big picture.** If the user gives a vague topic like "write about habits," ask what specific angle or insight they want to convey — the voice never covers a topic generically.
+- **Probe for the personal story.** The voice's most distinctive pattern is opening with a real anecdote. Ask: "What personal experience made you think about this?" or "Is there a specific moment or event that sparked this idea?"
+- **Clarify the takeaway.** The voice always builds toward a transferable principle. Ask: "What's the one thing you want the reader to walk away with?"
+- **Ask about the reader's challenge.** Conclusions pose direct questions to the reader. Ask: "What question would you want the reader to ask themselves after reading this?"
+- **Check for series context.** Ask whether this connects to an existing series or stands alone.
+- **Don't over-ask.** Once you have the six elements above, stop asking and start writing. The goal is enough material to be faithful to the voice — not an exhaustive interview.
+
+### When to Skip Clarification
+
+You may skip this process only when:
+
+- The user provides a detailed brief that already covers the six elements above
+- The user explicitly says to skip questions and just write (in which case, flag what you're missing and note that the draft may need the author to fill in personal stories)
+- The user is asking you to edit or revise an existing post (not create a new one)
+
+---
+
+## General Clarification Behavior
+
+For any request — not just new posts — if the user's instructions are ambiguous or missing information that affects correctness, ask specific clarifying questions before proceeding. State what is unclear and why it matters. Do not assume — ask.
 
 Common situations requiring clarification:
 
-- Post topic or angle is not clearly defined
-- Target audience or tone is unclear
 - Whether to create a new post or edit an existing one
 - Which template to use when multiple exist
 - Where to position subscribe buttons in the content
+- Scope of edits (light copyedit vs. structural revision)
 
 ---
 
@@ -148,17 +183,38 @@ Before delivering any created or edited content, verify:
 
 ## Examples
 
-### Example 1: Creating a New Post Directory
+### Example 1: User Requests a New Post (Clarification Required)
 
-**User request:** "Create a new post about morning routines"
+**User request:** "Write a post about morning routines"
 
-**Correct action:**
+**Incorrect action:** Immediately create `morning-routines/post.md` and start writing generic content about morning routines.
+
+**Correct action:** Begin a clarification conversation:
+
+> "Before I start writing, I need to understand the angle. A few questions:
+>
+> 1. What's the core insight here — is this about a specific morning routine system you've built, a mistake you made by not having one, or something else?
+> 2. What personal experience sparked this? Was there a specific morning (or string of bad mornings) that made you rethink your approach?
+> 3. What's the one thing you'd want the reader to change about their morning after reading this?"
+
+Then continue asking follow-up questions based on the author's answers until you have enough material to write faithfully in the voice. Only then create the post directory and begin drafting.
+
+### Example 2: User Provides a Detailed Brief (Skip Clarification)
+
+**User request:** "Write a post about how I realized my morning routine was broken after I showed up to a client meeting on the wrong day. The core idea is that routines aren't about discipline — they're systems that remove decisions from your tired brain. Connect it to the exobrain series. The reader should ask themselves: what decisions am I still making manually every morning that I could automate?"
+
+**Correct action:** The brief covers the core idea, personal anchor story, reader takeaway, series connection, and reader question. Proceed directly to creating the post directory and writing the draft.
+
+### Example 3: Creating a Post Directory
+
+Once you are ready to write (after clarification or with a complete brief):
+
 1. Create directory: `morning-routines/`
 2. Create file: `morning-routines/post.md`
 3. Create subdirectory: `morning-routines/images/`
-4. Populate `post.md` following the template structure
+4. Populate `post.md` following the template structure and the author's voice
 
-### Example 2: Inserting a Subscribe Button
+### Example 4: Inserting a Subscribe Button
 
 **User request:** "Add a subscribe button after the introduction"
 
@@ -171,7 +227,7 @@ The journey to understanding ourselves begins with a single question...
 ## The First Step
 ```
 
-### Example 3: Incorrect Image Reference (What to Avoid)
+### Example 5: Incorrect Image Reference (What to Avoid)
 
 **Incorrect:**
 ```markdown
