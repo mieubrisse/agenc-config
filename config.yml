@@ -1,0 +1,16 @@
+agentTemplates:
+    github.com/mieubrisse/agenc-agent-template_calendar-manager: {}
+    github.com/mieubrisse/agenc-agent-template_chronicler: {}
+    github.com/mieubrisse/agenc-agent-template_clown: {}
+    github.com/mieubrisse/agenc-agent-template_content-brainstormer: {}
+    github.com/mieubrisse/agenc-agent-template_instagram-cover-photo-verifier: {}
+    github.com/mieubrisse/agenc-agent-template_instagram-video-producer: {}
+    github.com/mieubrisse/agenc-agent-template_lifeops-maintainer: {}
+    github.com/mieubrisse/agenc-agent-template_researcher: {}
+    github.com/mieubrisse/agenc-agent-template_software-engineer: {}
+    github.com/mieubrisse/agenc-agent-template_substack-voice-distiller: {}
+    github.com/mieubrisse/agenc-agent-template_substack-writer: {}
+    github.com/mieubrisse/agenc-agent-template_todoist-manager: {}
+    github.com/mieubrisse/agenc-agent-template_wise-master: {}
+syncedRepos:
+    - github.com/mieubrisse/dotfiles
