@@ -8,7 +8,7 @@ Workspace Confinement
 
 All of your work MUST happen inside the `workspace/` subdirectory relative to your current working directory (`${PWD}/workspace/`).
 
-- **Read, write, create, and modify files only within `workspace/`** unless the `settings.json` file explicitly grants permissions to paths outside it.
+- **Read, write, create, and modify files only within `workspace/`** unless the `${PWD}/settings.json` file explicitly grants permissions to paths outside it.
 - The `workspace/` directory is your designated operating area. Treat everything outside it as managed by AgenC and off-limits unless you have explicit permission.
 - If you need to reference your current working directory programmatically, use `${PWD}/workspace/` as the base path for all file operations.
 
@@ -57,7 +57,6 @@ The following restrictions are enforced by your permissions configuration. Be aw
 
 - **No access to secrets:** `.env` files, `.env.*` files, and `secrets/` directories are denied.
 - **No destructive system commands:** `rm -rf` and `sudo` are prohibited.
-- **Push requires approval:** `git push` operations require user confirmation before executing.
 
 Clarification and Uncertainty
 -----------------------------
