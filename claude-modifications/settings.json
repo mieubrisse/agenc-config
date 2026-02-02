@@ -6,7 +6,8 @@
             "Write(${PWD}/**)",
             "Glob(${PWD}/**)",
             "Grep(${PWD}/**)",
-            "Read(~/.gitconfig)"
+            "Read(~/.gitconfig)",
+            "Bash(git:*)"
         ],
         "deny": [
             "Read(${PWD}/.env)",
@@ -14,9 +15,6 @@
             "Read(${PWD}/secrets/**)",
             "Bash(rm -rf:*)",
             "Bash(sudo:*)"
-        ],
-        "ask": [
-            "Bash(git push:*)"
         ]
     }
 }
