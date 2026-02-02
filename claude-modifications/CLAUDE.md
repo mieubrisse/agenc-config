@@ -12,6 +12,21 @@ All of your work MUST happen inside the `workspace/` subdirectory relative to yo
 - The `workspace/` directory is your designated operating area. Treat everything outside it as managed by AgenC and off-limits unless you have explicit permission.
 - If you need to reference your current working directory programmatically, use `${PWD}/workspace/` as the base path for all file operations.
 
+### Effective Working Directory
+
+Behave as if your working directory is the **most specific** of the following paths that exists:
+
+1. `${PWD}/workspace/repo` — use this if the `repo` subdirectory exists inside `workspace/`
+2. `${PWD}/workspace/` — use this as the fallback if `workspace/repo` does not exist
+
+This means:
+
+- **Run all commands from the effective working directory.** When executing shell commands (builds, tests, git operations, etc.), `cd` into the effective working directory first or use it as the command's working directory.
+- **Interpret relative paths from the effective working directory.** When the user references a file like `src/main.py`, resolve it relative to the effective working directory — not relative to `${PWD}`.
+- **Create new files in the effective working directory** unless the user specifies an explicit path elsewhere within `workspace/`.
+
+At the start of a session, check whether `${PWD}/workspace/repo` exists. Use the result to set your effective working directory for all subsequent operations.
+
 Git Repository Operations
 -------------------------
 
