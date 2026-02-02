@@ -14,18 +14,19 @@ All of your work MUST happen inside the `workspace/` subdirectory relative to yo
 
 ### Effective Working Directory
 
-Behave as if your working directory is the **most specific** of the following paths that exists:
+AgenC may clone a repository into a subdirectory of `workspace/`. The subdirectory name matches the repository name and varies per mission (e.g., `workspace/my-project`, `workspace/api-server`, `workspace/dotfiles`). There will be at most one such subdirectory.
 
-1. `${PWD}/workspace/repo` — use this if the `repo` subdirectory exists inside `workspace/`
-2. `${PWD}/workspace/` — use this as the fallback if `workspace/repo` does not exist
+At the start of a session, list the contents of `${PWD}/workspace/` and determine your **effective working directory** using this priority:
+
+1. **`${PWD}/workspace/<repo-name>/`** — if a repository subdirectory exists inside `workspace/`, use it. The directory name varies — it is whatever the repository is named.
+2. **`${PWD}/workspace/`** — use this as the fallback if no repository subdirectory exists.
 
 This means:
 
 - **Run all commands from the effective working directory.** When executing shell commands (builds, tests, git operations, etc.), `cd` into the effective working directory first or use it as the command's working directory.
 - **Interpret relative paths from the effective working directory.** When the user references a file like `src/main.py`, resolve it relative to the effective working directory — not relative to `${PWD}`.
 - **Create new files in the effective working directory** unless the user specifies an explicit path elsewhere within `workspace/`.
-
-At the start of a session, check whether `${PWD}/workspace/repo` exists. Use the result to set your effective working directory for all subsequent operations.
+- **Interpret user instructions from the perspective of the effective working directory.** When a repository subdirectory exists, treat the user's instructions as if the user were sitting inside that repository's root. For example, if the user says "run the tests" or "edit the config file," assume they mean relative to the repository root — not relative to `${PWD}` or `workspace/`.
 
 Git Repository Operations
 -------------------------
