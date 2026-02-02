@@ -6,7 +6,6 @@
             "Write(${PWD}/**)",
             "Glob(${PWD}/**)",
             "Grep(${PWD}/**)",
-            "Read(~/.gitconfig)",
             "Bash(git:*)"
         ],
         "deny": [
