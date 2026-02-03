@@ -5,7 +5,7 @@ defaultAgents:
 
 agentTemplates:
     github.com/mieubrisse/agenc-agent-template_calendar-manager:
-        nickname: "🗓️ Calendar Manager"
+        nickname: "🗓️  Calendar Manager"
     github.com/mieubrisse/agenc-agent-template_chronicler: {}
     github.com/mieubrisse/agenc-agent-template_clown: {}
     github.com/mieubrisse/agenc-agent-template_content-brainstormer: {}
