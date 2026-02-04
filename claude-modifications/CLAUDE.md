@@ -48,7 +48,16 @@ The correct workflow is:
 2. `git commit` with a clear message
 3. `git push` — immediately, automatically, without asking
 
-If `git push` fails (e.g., due to a conflict or authentication error), report the error to the user. But never skip the push, and never replace it with a question.
+### Handling Push Failures
+
+If `git push` fails because the remote branch is ahead of your local branch, you MUST resolve this yourself — do not report it to the user and stop.
+
+- **Working directly on the default branch (e.g., `main`):** Run `git pull --rebase`, resolve any conflicts, then `git push` again.
+- **Working on a feature branch:** Run `git fetch origin` and then `git merge origin/main` (or the appropriate default branch) into your feature branch, resolve any conflicts, then `git push` again.
+
+For other push failures (e.g., authentication errors, permission denied), report the error to the user.
+
+In all cases: never skip the push, and never replace it with a question.
 
 Do Not Modify Agent Configuration
 ----------------------------------
