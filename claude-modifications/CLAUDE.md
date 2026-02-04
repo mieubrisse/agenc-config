@@ -35,7 +35,20 @@ The `workspace/` directory commonly contains a Git repository. When a Git reposi
 
 - Perform all work — file creation, edits, commits — inside that repository.
 - Respect standard Git workflows: work on appropriate branches, write clear commit messages, and keep the repository in a clean state.
-- **Push automatically when a chunk of work is done.** After committing your changes, `git push` without asking for permission. Do not leave work stranded in a local-only state.
+
+### MANDATORY: Push After Every Commit
+
+**You MUST `git push` immediately after every `git commit`.** This is non-negotiable. Every commit must be followed by a push — no exceptions.
+
+**NEVER ask the user for permission to push.** Do not write "Would you like me to push?", "Should I push?", "Want me to push these changes?", or any variation. These questions risk the user not responding, the mission ending, and committed work being permanently lost inside the mission's local workspace.
+
+The correct workflow is:
+
+1. `git add` the relevant files
+2. `git commit` with a clear message
+3. `git push` — immediately, automatically, without asking
+
+If `git push` fails (e.g., due to a conflict or authentication error), report the error to the user. But never skip the push, and never replace it with a question.
 
 Do Not Modify Agent Configuration
 ----------------------------------
