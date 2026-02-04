@@ -1,27 +1,24 @@
-# Documentation: https://github.com/mieubrisse/agenc/blob/main/README.md
-
-defaultAgents:
-    repo: github.com/mieubrisse/agenc-agent-template_software-engineer
-
 agentTemplates:
-    github.com/mieubrisse/agenc-agent-template_agenc-engineer:
-        nickname: "🤖 AgenC Engineer"
-    github.com/mieubrisse/agenc-agent-template_calendar-manager:
-        nickname: "🗓️  Calendar Manager"
-    github.com/mieubrisse/agenc-agent-template_chronicler: {}
-    github.com/mieubrisse/agenc-agent-template_clown: {}
-    github.com/mieubrisse/agenc-agent-template_content-brainstormer: {}
-    github.com/mieubrisse/agenc-agent-template_instagram-cover-photo-verifier: {}
-    github.com/mieubrisse/agenc-agent-template_instagram-video-producer: {}
-    github.com/mieubrisse/agenc-agent-template_lifeops-maintainer: {}
-    github.com/mieubrisse/agenc-agent-template_researcher:
-        nickname: "🔍 Researcher"
-    github.com/mieubrisse/agenc-agent-template_software-engineer:
-        nickname: "👨‍💻 Software Engineer"
-    github.com/mieubrisse/agenc-agent-template_substack-voice-distiller: {}
-    github.com/mieubrisse/agenc-agent-template_substack-writer: {}
-    github.com/mieubrisse/agenc-agent-template_todoist-manager:
-        nickname: "✅ Todoist Manager"
-    github.com/mieubrisse/agenc-agent-template_wise-master: {}
+  github.com/mieubrisse/agenc-agent-template_agenc-engineer:
+    nickname: 🤖 AgenC Engineer
+    defaultFor: agentTemplate
+  github.com/mieubrisse/agenc-agent-template_calendar-manager:
+    nickname: 🗓️  Calendar Manager
+  github.com/mieubrisse/agenc-agent-template_chronicler: {}
+  github.com/mieubrisse/agenc-agent-template_clown: {}
+  github.com/mieubrisse/agenc-agent-template_content-brainstormer: {}
+  github.com/mieubrisse/agenc-agent-template_instagram-cover-photo-verifier: {}
+  github.com/mieubrisse/agenc-agent-template_instagram-video-producer: {}
+  github.com/mieubrisse/agenc-agent-template_lifeops-maintainer: {}
+  github.com/mieubrisse/agenc-agent-template_researcher:
+    nickname: 🔍 Researcher
+  github.com/mieubrisse/agenc-agent-template_software-engineer:
+    nickname: 👨‍💻 Software Engineer
+    defaultFor: repo
+  github.com/mieubrisse/agenc-agent-template_substack-voice-distiller: {}
+  github.com/mieubrisse/agenc-agent-template_substack-writer: {}
+  github.com/mieubrisse/agenc-agent-template_todoist-manager:
+    nickname: ✅ Todoist Manager
+  github.com/mieubrisse/agenc-agent-template_wise-master: {}
 syncedRepos:
-    - github.com/mieubrisse/dotfiles
+- github.com/mieubrisse/dotfiles
