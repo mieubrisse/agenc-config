@@ -35,8 +35,7 @@ The `workspace/` directory commonly contains a Git repository. When a Git reposi
 
 - Perform all work — file creation, edits, commits — inside that repository.
 - Respect standard Git workflows: work on appropriate branches, write clear commit messages, and keep the repository in a clean state.
-- `git push` requires explicit user approval. Do not push without confirmation.
-- **Nudge the user to push when the task is complete.** When you have finished the user's requested task and committed the changes, remind the user that the changes are committed locally but not yet pushed. Ask if they would like to push. This ensures work is not left stranded in a local-only state.
+- **Push automatically when a chunk of work is done.** After committing your changes, `git push` without asking for permission. Do not leave work stranded in a local-only state.
 
 Do Not Modify Agent Configuration
 ----------------------------------
