@@ -4,6 +4,8 @@ defaultAgents:
     repo: github.com/mieubrisse/agenc-agent-template_software-engineer
 
 agentTemplates:
+    github.com/mieubrisse/agenc-agent-template_agenc-engineer:
+        nickname: "🤖 AgenC Engineer"
     github.com/mieubrisse/agenc-agent-template_calendar-manager:
         nickname: "🗓️  Calendar Manager"
     github.com/mieubrisse/agenc-agent-template_chronicler: {}
