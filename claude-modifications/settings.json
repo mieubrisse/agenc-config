@@ -15,5 +15,10 @@
             "Bash(rm -rf:*)",
             "Bash(sudo:*)"
         ]
+    },
+    "sandbox": {
+        "enabled": true,
+        "autoAllowBashIfSandboxed": true,
+        "allowUnsandboxedCommands": false
     }
 }
