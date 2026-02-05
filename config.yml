@@ -4,7 +4,8 @@ agentTemplates:
     defaultFor: agentTemplate
   github.com/mieubrisse/agenc-agent-template_calendar-manager:
     nickname: 🗓️  Calendar Manager
-  github.com/mieubrisse/agenc-agent-template_chronicler: {}
+  github.com/mieubrisse/agenc-agent-template_chronicler:
+    nickname: 📚 Chronicler
   github.com/mieubrisse/agenc-agent-template_clown: {}
   github.com/mieubrisse/agenc-agent-template_content-brainstormer: {}
   github.com/mieubrisse/agenc-agent-template_instagram-cover-photo-verifier: {}
