@@ -22,6 +22,7 @@ agentTemplates:
     nickname: 📝 Technical Writer
   github.com/mieubrisse/agenc-agent-template_todoist-manager:
     nickname: ✅ Todoist Manager
-  github.com/mieubrisse/agenc-agent-template_wise-master: {}
+  github.com/mieubrisse/agenc-agent-template_wise-master:
+    nickname: 🧘‍♂️ Wise Master
 syncedRepos:
 - github.com/mieubrisse/dotfiles
