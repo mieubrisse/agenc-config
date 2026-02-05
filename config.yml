@@ -18,6 +18,8 @@ agentTemplates:
     defaultFor: repo
   github.com/mieubrisse/agenc-agent-template_substack-voice-distiller: {}
   github.com/mieubrisse/agenc-agent-template_substack-writer: {}
+  github.com/mieubrisse/agenc-agent-template_technical-writer:
+    nickname: 📝 Technical Writer
   github.com/mieubrisse/agenc-agent-template_todoist-manager:
     nickname: ✅ Todoist Manager
   github.com/mieubrisse/agenc-agent-template_wise-master: {}
