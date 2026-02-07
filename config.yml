@@ -1,28 +1,5 @@
-agentTemplates:
-  github.com/mieubrisse/agenc-agent-template_agenc-engineer:
-    nickname: 🤖 AgenC Engineer
-    defaultFor: agentTemplate
-  github.com/mieubrisse/agenc-agent-template_calendar-manager:
-    nickname: 🗓️  Calendar Manager
-  github.com/mieubrisse/agenc-agent-template_chronicler:
-    nickname: 📚 Chronicler
-  github.com/mieubrisse/agenc-agent-template_clown: {}
-  github.com/mieubrisse/agenc-agent-template_content-brainstormer: {}
-  github.com/mieubrisse/agenc-agent-template_instagram-cover-photo-verifier: {}
-  github.com/mieubrisse/agenc-agent-template_instagram-video-producer: {}
-  github.com/mieubrisse/agenc-agent-template_lifeops-maintainer: {}
-  github.com/mieubrisse/agenc-agent-template_researcher:
-    nickname: 🔍 Researcher
-  github.com/mieubrisse/agenc-agent-template_software-engineer:
-    nickname: 👨‍💻 Software Engineer
-    defaultFor: repo
-  github.com/mieubrisse/agenc-agent-template_substack-voice-distiller: {}
-  github.com/mieubrisse/agenc-agent-template_substack-writer: {}
-  github.com/mieubrisse/agenc-agent-template_technical-writer:
-    nickname: 📝 Technical Writer
-  github.com/mieubrisse/agenc-agent-template_todoist-manager:
-    nickname: ✅ Todoist Manager
-  github.com/mieubrisse/agenc-agent-template_wise-master:
-    nickname: 🧘‍♂️ Wise Master
 syncedRepos:
 - github.com/mieubrisse/dotfiles
+claudeConfig:
+  repo: github.com/mieubrisse/dotfiles
+  subdirectory: claude/
