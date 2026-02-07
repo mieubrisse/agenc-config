@@ -1,5 +1,2 @@
 syncedRepos:
 - github.com/mieubrisse/dotfiles
-claudeConfig:
-  repo: github.com/mieubrisse/dotfiles
-  subdirectory: claude/
