@@ -3,3 +3,4 @@ syncedRepos:
 claudeConfig:
   repo: github.com/mieubrisse/dotfiles
   subdirectory: claude
+tmuxAgencFilepath: ~/app/agenc/agenc
