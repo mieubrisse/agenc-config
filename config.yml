@@ -1,16 +1,13 @@
 syncedRepos:
 - github.com/mieubrisse/dotfiles
-claudeConfig:
-  repo: github.com/mieubrisse/dotfiles
-  subdirectory: claude
 tmuxAgencFilepath: ~/app/agenc/agenc
 customCommands:
-  dotfiles:
-    args: mission new github.com/mieubrisse/dotfiles
-    paletteName: "🛠️ Open dotfiles"
   agenc:
     args: mission new github.com/mieubrisse/agenc
-    paletteName: "🤖 Open agenc"
+    paletteName: 🤖 Open agenc
+  dotfiles:
+    args: mission new github.com/mieubrisse/dotfiles
+    paletteName: 🛠️ Open dotfiles
   personalWriting:
     args: mission new github.com/mieubrisse/personal-writing
-    paletteName: "📝 Open personal writing"
+    paletteName: 📝 Open personal writing
