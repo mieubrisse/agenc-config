@@ -6,8 +6,14 @@ paletteCommands:
     title: "🤖 Open agenc"
     command: "agenc tmux window new -- agenc mission new github.com/mieubrisse/agenc"
   dotfiles:
-    title: "🛠️ Open dotfiles"
+    title: "🔧 Open dotfiles"
     command: "agenc tmux window new -- agenc mission new github.com/mieubrisse/dotfiles"
   personalWriting:
     title: "📝 Open personal writing"
     command: "agenc tmux window new -- agenc mission new github.com/mieubrisse/personal-writing"
+  todoistManager:
+    title: "✅ Open Todoist manager"
+    command: "agenc tmux window new -- agenc mission new github.com/mieubrisse/todoist-manager"
+  calendarManager:
+    title: "📅 Open calendar manager"
+    command: "agenc tmux window new -- agenc mission new github.com/mieubrisse/calendar-manager"
