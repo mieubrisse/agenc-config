@@ -1,13 +1,13 @@
 syncedRepos:
 - github.com/mieubrisse/dotfiles
 tmuxAgencFilepath: ~/app/agenc/agenc
-customCommands:
-  agenc:
-    args: mission new github.com/mieubrisse/agenc
-    paletteName: 🤖 Open agenc
+paletteCommands:
+  agenc-dev:
+    title: "🤖 Open agenc"
+    command: "agenc tmux window new -- agenc mission new github.com/mieubrisse/agenc"
   dotfiles:
-    args: mission new github.com/mieubrisse/dotfiles
-    paletteName: 🛠️ Open dotfiles
+    title: "🛠️ Open dotfiles"
+    command: "agenc tmux window new -- agenc mission new github.com/mieubrisse/dotfiles"
   personalWriting:
-    args: mission new github.com/mieubrisse/personal-writing
-    paletteName: 📝 Open personal writing
+    title: "📝 Open personal writing"
+    command: "agenc tmux window new -- agenc mission new github.com/mieubrisse/personal-writing"
