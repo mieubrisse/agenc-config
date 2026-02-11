@@ -1,5 +1,3 @@
-syncedRepos:
-- github.com/mieubrisse/dotfiles
 tmuxAgencFilepath: ~/app/agenc/agenc
 paletteCommands:
   agenc-dev:
