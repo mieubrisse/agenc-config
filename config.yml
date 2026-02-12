@@ -1,10 +1,10 @@
 repoConfig:
   github.com/mieubrisse/agenc:
-    windowTitle: 🤖
+    windowTitle: "🤖 "
   github.com/mieubrisse/dotfiles:
-    windowTitle: 🛠️
+    windowTitle: "🛠️ "
   github.com/mieubrisse/personal-writing:
-    windowTitle: 📝
+    windowTitle: "📝 "
 paletteCommands:
   agenc-dev:
     title: 🤖 Open AgenC
