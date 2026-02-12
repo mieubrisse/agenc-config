@@ -3,7 +3,6 @@ repoConfig:
     windowTitle: 🤖
   github.com/mieubrisse/dotfiles:
     windowTitle: 🛠️
-tmuxAgencFilepath: ~/app/agenc/agenc
 paletteCommands:
   agenc-dev:
     title: 🤖 Open AgenC
