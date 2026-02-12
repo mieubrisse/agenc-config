@@ -7,19 +7,18 @@ repoConfig:
     windowTitle: "📝 "
 paletteCommands:
   agenc-dev:
-    title: 🤖 Open AgenC
+    title: 🤖  Open AgenC
     command: "agenc tmux window new -- agenc mission new github.com/mieubrisse/agenc"
   calendarManager:
-    title: 📅 Open Calendar Manager
+    title: 📅  Open Calendar Manager
     command: "agenc tmux window new -- agenc mission new github.com/mieubrisse/calendar-manager"
   dotfiles:
-    title: 🛠️ Open Dotfiles
+    title: 🛠️  Open Dotfiles
     command: "agenc tmux window new -- agenc mission new github.com/mieubrisse/dotfiles"
   personalWriting:
-    title: 📝 Open Personal Writing
+    title: 📝  Open Personal Writing
     command: "agenc tmux window new -- agenc mission new github.com/mieubrisse/personal-writing"
   todoistManager:
-    title: ✅ Open Todoist Manager
+    title: ✅  Open Todoist Manager
     command: "agenc tmux window new -- agenc mission new github.com/mieubrisse/todoist-manager"
 paletteTmuxKeybinding: -n C-y
-doAutoConfirm: true
