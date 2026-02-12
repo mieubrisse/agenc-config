@@ -20,6 +20,8 @@ paletteCommands:
     command: "agenc tmux window new -- agenc mission new github.com/mieubrisse/personal-writing"
   stopMission:
     tmuxKeybinding: C-s
+  switchMission:
+    tmuxKeybinding: -n C-m
   todoistManager:
     title: ✅  Open Todoist Manager
     command: "agenc tmux window new -- agenc mission new github.com/mieubrisse/todoist-manager"
