@@ -26,6 +26,3 @@ paletteCommands:
     title: ✅  Open Todoist Manager
     command: "agenc tmux window new -- agenc mission new github.com/mieubrisse/todoist-manager"
 paletteTmuxKeybinding: -n C-y
-tmuxWindowBusyColor: red
-tmuxWindowAttentionColor: colour220
-tmuxWindowColoringEnabled: true
