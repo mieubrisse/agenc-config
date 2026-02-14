@@ -23,10 +23,13 @@ paletteCommands:
   personalWriting:
     title: 📝  Open Personal Writing
     command: "agenc tmux window new -- agenc mission new github.com/mieubrisse/personal-writing"
+  sideAdjutant:
+    tmuxKeybinding: -n C-t
   stopMission:
     tmuxKeybinding: C-s
   switchMission:
     tmuxKeybinding: -n C-m
+  talkToAgenc: {}
   todoistManager:
     title: ✅  Open Todoist Manager
     command: "agenc tmux window new -- agenc mission new github.com/mieubrisse/todoist-manager"
