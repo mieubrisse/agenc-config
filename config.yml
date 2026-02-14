@@ -33,5 +33,4 @@ paletteCommands:
   todoistManager:
     title: ✅  Open Todoist Manager
     command: "agenc tmux window new -- agenc mission new github.com/mieubrisse/todoist-manager"
-paletteTmuxKeybinding: -n C-y
 tmuxWindowTitle: {}
