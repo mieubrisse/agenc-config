@@ -15,9 +15,6 @@ paletteCommands:
   dotfiles:
     title: 🛠️   Open Dotfiles
     command: "agenc tmux window new -a -- agenc mission new github.com/mieubrisse/dotfiles"
-  newRepo:
-    title: 🆕 New Repo
-    command: "agenc tmux window new -a -- agenc mission new         --blank         --prompt 'I want to create a new GitHub repository. Please:\n            1) Ask me what the repository name should be and whether I want it public or private\n            2) Create it on GitHub using the gh CLI\n            3) Initialize this blank mission directory as a git repo and set it up to track the newly created GitHub repository.'"
   personalWriting:
     title: 📝  Open Personal Writing
     command: "agenc tmux window new -a -- agenc mission new github.com/mieubrisse/personal-writing"
