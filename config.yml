@@ -5,11 +5,6 @@ repoConfig:
     windowTitle: "🛠️ "
   github.com/mieubrisse/personal-writing:
     windowTitle: "📝 "
-crons:
-  hello-world:
-    schedule: "* * * * *"
-    prompt: "Print 'Hello world\\! The time is <current time>'"
-    timeout: 1m
 paletteCommands:
   agenc-dev:
     title: 🤖  Open AgenC
