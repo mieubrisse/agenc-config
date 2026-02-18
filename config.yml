@@ -1,6 +1,8 @@
 repoConfig:
   github.com/mieubrisse/agenc:
     windowTitle: "🤖 "
+  github.com/mieubrisse/calendar-manager:
+    windowTitle: "📅 "
   github.com/mieubrisse/dotfiles:
     windowTitle: "🛠️ "
   github.com/mieubrisse/personal-writing:
