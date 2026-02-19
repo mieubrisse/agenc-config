@@ -3,6 +3,8 @@ repoConfig:
     windowTitle: "🤖 "
   github.com/mieubrisse/calendar-manager:
     windowTitle: "📅 "
+    trustedMcpServers:
+    - google-calendar
   github.com/mieubrisse/dotfiles:
     windowTitle: "🛠️ "
   github.com/mieubrisse/personal-writing:
