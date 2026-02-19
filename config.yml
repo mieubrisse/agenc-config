@@ -9,6 +9,8 @@ repoConfig:
     windowTitle: "🛠️ "
   github.com/mieubrisse/personal-writing:
     windowTitle: "📝 "
+  github.com/mieubrisse/todoist-manager:
+    windowTitle: "✅ "
 paletteCommands:
   agenc-dev:
     title: 🤖  Open AgenC
