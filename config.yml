@@ -31,3 +31,4 @@ paletteCommands:
     title: ✅  Open Todoist Manager
     command: "agenc tmux window new -a -- agenc mission new github.com/mieubrisse/todoist-manager"
 tmuxWindowTitle: {}
+defaultModel: opus
