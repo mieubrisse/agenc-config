@@ -9,6 +9,8 @@ repoConfig:
     windowTitle: "🛠️ "
   github.com/mieubrisse/personal-writing:
     windowTitle: "📝 "
+    trustedMcpServers:
+    - substack-mcp-plus
   github.com/mieubrisse/todoist-manager:
     windowTitle: "✅ "
 paletteCommands:
