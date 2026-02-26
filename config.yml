@@ -1,6 +1,6 @@
 repoConfig:
   github.com/mieubrisse/agenc:
-    windowTitle: "🤖 "
+    windowTitle: 🚀
   github.com/mieubrisse/calendar-manager:
     windowTitle: "📅 "
     trustedMcpServers:
@@ -9,14 +9,13 @@ repoConfig:
     windowTitle: "🛠️ "
   github.com/mieubrisse/personal-writing:
     windowTitle: "📝 "
-    trustedMcpServers:
-    - substack-mcp-plus
-  github.com/mieubrisse/researcher: {}
+  github.com/mieubrisse/researcher:
+    windowTitle: "🔍 "
   github.com/mieubrisse/todoist-manager:
     windowTitle: "✅ "
 paletteCommands:
   agenc-dev:
-    title: 🤖  Open AgenC
+    title: 🚀 Open AgenC
     command: "agenc tmux window new -a -- agenc mission new github.com/mieubrisse/agenc"
   calendarManager:
     title: 📅  Open Calendar Manager
