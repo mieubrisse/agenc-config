@@ -11,6 +11,7 @@ repoConfig:
     windowTitle: "📝 "
     trustedMcpServers:
     - substack-mcp-plus
+  github.com/mieubrisse/researcher: {}
   github.com/mieubrisse/todoist-manager:
     windowTitle: "✅ "
 paletteCommands:
@@ -29,6 +30,9 @@ paletteCommands:
   personalWriting:
     title: 📝  Open Personal Writing
     command: "agenc tmux window new -a -- agenc mission new github.com/mieubrisse/personal-writing"
+  researcher:
+    title: 🔍  Researcher
+    command: "agenc tmux window new -a -- agenc mission new github.com/mieubrisse/researcher"
   todoistManager:
     title: ✅  Open Todoist Manager
     command: "agenc tmux window new -a -- agenc mission new github.com/mieubrisse/todoist-manager"
