@@ -29,6 +29,10 @@ paletteCommands:
   personalWriting:
     title: 📝  Open Personal Writing
     command: "agenc tmux window new -a -- agenc mission new github.com/mieubrisse/personal-writing"
+  refine:
+    title: 🔧 Refine
+    description: Launch an Adjutant mission to refine lessons from the current mission
+    command: "agenc tmux window new -- agenc mission new --adjutant --prompt \"In mission $AGENC_CALLING_MISSION_UUID I hit some friction and I want to make some refinements. I'm going to describe these friction points, and you can decide how we can best roll these lessons back into the system.\""
   researcher:
     title: 🔍  Researcher
     command: "agenc tmux window new -a -- agenc mission new github.com/mieubrisse/researcher"
