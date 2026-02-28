@@ -27,6 +27,10 @@ paletteCommands:
   dotfiles:
     title: 🛠️   Open Dotfiles
     command: "agenc tmux window new -a -- agenc mission new github.com/mieubrisse/dotfiles"
+  draft:
+    title: 📝  Side Draft
+    command: tmux split-window -h 'filepath=$(mktemp ${TMPDIR:-/tmp}/scratch-XXXXXX) && mv ${filepath} ${filepath}.md && filepath=${filepath}.md && vim -c startinsert ${filepath}'
+    tmuxKeybinding: -n C-v
   personalWriting:
     title: 📝  Open Personal Writing
     command: "agenc tmux window new -a -- agenc mission new github.com/mieubrisse/personal-writing"
