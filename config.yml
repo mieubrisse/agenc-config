@@ -1,6 +1,7 @@
 repoConfig:
   github.com/mieubrisse/agenc:
     windowTitle: "🚀 "
+    postUpdateHook: make setup
   github.com/mieubrisse/calendar-manager:
     windowTitle: "📅 "
     trustedMcpServers:
