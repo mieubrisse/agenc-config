@@ -12,6 +12,7 @@ repoConfig:
     windowTitle: "📝 "
   github.com/mieubrisse/researcher:
     windowTitle: "🔍 "
+  github.com/mieubrisse/superpowers: {}
   github.com/mieubrisse/todoist-manager:
     windowTitle: "✅ "
 paletteCommands:
