@@ -1,6 +1,6 @@
 repoConfig:
   github.com/mieubrisse/agenc:
-    windowTitle: "🚀 "
+    emoji: "🚀"
     postUpdateHook: make setup
   github.com/mieubrisse/calendar-manager:
     windowTitle: "📅 "
