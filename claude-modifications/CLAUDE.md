@@ -29,6 +29,34 @@ git rev-parse --is-inside-work-tree 2>/dev/null
 
 ---
 
+Cross-Repo Work
+---------------
+
+Each mission is scoped to a single repository. When a user asks you to make changes to, investigate, or do work in a **different repository** than the one your mission is running in, spawn a new mission targeting that repo rather than attempting the work from your current mission.
+
+**Why this matters:** Missions are isolated workspaces — each gets its own clone of its target repo, its own branch management, and its own commit/push lifecycle. Working in a foreign repo from within your mission bypasses these guarantees, risks mixing unrelated changes, and loses the ephemeral-safety net (auto-commit and push) that protects work from being lost.
+
+**How to spawn a new mission:**
+
+```bash
+agenc mission new <repo> --prompt "<description of the work to do>"
+```
+
+Include a clear, specific prompt so the new mission's agent can act autonomously. Summarize the context — what to change, why, and any constraints — rather than assuming the new agent shares your conversation history.
+
+**When to spawn vs. when to stay:**
+
+| Situation | Action |
+|-----------|--------|
+| User asks you to modify files in another repo | Spawn a new mission targeting that repo |
+| User asks you to investigate code in another repo | Spawn a new mission targeting that repo |
+| User asks you to read another repo for reference (no changes needed) | Use `agenc repo ls` to find the repo path and read from `~/.agenc/repos/` — no new mission needed |
+| The work is in your current repo but a different branch | Stay in your mission — use git branching |
+
+**After spawning:** Tell the user you have launched a new mission and what it will do. If the cross-repo work is a dependency for your current task, say so and explain what you are waiting on.
+
+---
+
 Git Workflow
 ------------
 
