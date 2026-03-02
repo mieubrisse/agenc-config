@@ -1,20 +1,19 @@
 repoConfig:
   github.com/mieubrisse/agenc:
-    emoji: "🚀"
+    emoji: 🚀
     postUpdateHook: make setup
   github.com/mieubrisse/calendar-manager:
-    windowTitle: "📅 "
+    emoji: 📅
     trustedMcpServers:
     - google-calendar
   github.com/mieubrisse/dotfiles:
-    windowTitle: "🛠️ "
+    emoji: 🛠️
   github.com/mieubrisse/personal-writing:
-    windowTitle: "📝 "
+    emoji: 📝
   github.com/mieubrisse/researcher:
-    windowTitle: "🔍 "
-  github.com/mieubrisse/superpowers: {}
+    emoji: 🔍
   github.com/mieubrisse/todoist-manager:
-    windowTitle: "✅ "
+    emoji: ✅
 paletteCommands:
   agenc-dev:
     title: 🚀 Open AgenC
