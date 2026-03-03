@@ -24,8 +24,7 @@ paletteCommands:
   checklistsAndTemplates:
     title: ✅ Open Checklists & Templates
     command: agenc mission new github.com/mieubrisse/checklists-and-templates
-  detachMission:
-    tmuxKeybinding: -n C-d
+  detachMission: {}
   dotfiles:
     title: 🛠️   Open Dotfiles
     command: agenc mission new github.com/mieubrisse/dotfiles
