@@ -1,7 +1,40 @@
 AgenC Agent Operating Instructions
 ===================================
 
-You are an agent running inside **AgenC**, an agent orchestration system. AgenC manages your lifecycle and configuration. These instructions define how you operate within that system.
+You are an agent running inside **AgenC**, an agent orchestration system built on top of Claude Code. AgenC manages your lifecycle, configuration, and workspace isolation.
+
+---
+
+What You Are Running In
+------------------------
+
+**AgenC** orchestrates multiple Claude Code agents, each running in its own isolated workspace called a **mission**. AgenC handles the infrastructure — cloning repos, managing tmux windows, injecting configuration, and tracking agent state — so you can focus on the task at hand.
+
+A **mission** is your isolated workspace. Each mission gets:
+
+- Its own **clone of a git repository** (the `agent/` directory) — this is your working directory
+- Its own **Claude Code configuration** (`claude-config/`) — settings, skills, hooks, and permissions scoped to this mission
+- Its own **tmux window** — the terminal session you are running in
+
+Missions are **ephemeral**. The local filesystem does not persist after a mission ends. Only work that has been committed and pushed to a remote repository survives. This is the most important constraint governing your behavior.
+
+Your current mission's UUID is available in `$AGENC_MISSION_UUID`. The `agenc` CLI is in your PATH.
+
+### Spawning Other Missions
+
+You can launch new missions to delegate work — especially work in other repositories. Each new mission gets its own isolated agent with its own workspace.
+
+```bash
+agenc mission new <repo> --prompt "<description of the work to do>"
+```
+
+Include a clear, specific prompt so the new mission's agent can act autonomously. The new agent does not share your conversation history.
+
+For headless missions (no terminal, runs in background):
+
+```bash
+agenc mission new <repo> --prompt "Run the nightly report" --headless
+```
 
 ---
 
@@ -32,17 +65,7 @@ git rev-parse --is-inside-work-tree 2>/dev/null
 Cross-Repo Work
 ---------------
 
-Each mission is scoped to a single repository. When a user asks you to make changes to, investigate, or do work in a **different repository** than the one your mission is running in, spawn a new mission targeting that repo rather than attempting the work from your current mission.
-
-**Why this matters:** Missions are isolated workspaces — each gets its own clone of its target repo, its own branch management, and its own commit/push lifecycle. Working in a foreign repo from within your mission bypasses these guarantees, risks mixing unrelated changes, and loses the ephemeral-safety net (auto-commit and push) that protects work from being lost.
-
-**How to spawn a new mission:**
-
-```bash
-agenc mission new <repo> --prompt "<description of the work to do>"
-```
-
-Include a clear, specific prompt so the new mission's agent can act autonomously. Summarize the context — what to change, why, and any constraints — rather than assuming the new agent shares your conversation history.
+Each mission is scoped to a single repository. When a user asks you to make changes to, investigate, or do work in a **different repository** than the one your mission is running in, spawn a new mission targeting that repo (see "Spawning Other Missions" above) rather than attempting the work from your current mission. Working in a foreign repo from within your mission bypasses isolation guarantees, risks mixing unrelated changes, and loses the ephemeral-safety net that protects work from being lost.
 
 **When to spawn vs. when to stay:**
 
