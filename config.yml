@@ -29,7 +29,7 @@ paletteCommands:
     command: agenc mission new github.com/mieubrisse/dotfiles
   draft:
     title: 📝  Side Draft
-    command: tmux split-window -h 'filepath=$(mktemp ${TMPDIR:-/tmp}/scratch-XXXXXX) && mv ${filepath} ${filepath}.md && filepath=${filepath}.md && vim -c startinsert ${filepath}'
+    command: "target=$(tmux display-message -p \"#{pane_id}\") && tmux split-window -h \"filepath=\\$(mktemp \\${TMPDIR:-/tmp}/scratch-XXXXXX) && mv \\${filepath} \\${filepath}.md && filepath=\\${filepath}.md && vim -c startinsert \\${filepath}; if [ -s \\${filepath} ]; then tmux load-buffer \\${filepath} && tmux paste-buffer -t ${target}; fi; rm -f \\${filepath}\""
     tmuxKeybinding: -n C-v
   personalWriting:
     title: 📝  Open Personal Writing

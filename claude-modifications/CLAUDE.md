@@ -30,11 +30,7 @@ agenc mission new <repo> --prompt "<description of the work to do>"
 
 Include a clear, specific prompt so the new mission's agent can act autonomously. The new agent does not share your conversation history.
 
-For headless missions (no terminal, runs in background):
-
-```bash
-agenc mission new <repo> --prompt "Run the nightly report" --headless
-```
+**Prefer headed missions** (the default) over headless ones. Headed missions open a tmux window the user can observe and interact with, giving them visibility into what the agent is doing. Only use `--headless` for fully autonomous tasks that need no human oversight (e.g., scheduled jobs, background reports).
 
 ---
 
