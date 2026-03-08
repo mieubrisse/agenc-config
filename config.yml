@@ -8,6 +8,8 @@ repoConfig:
     - google-calendar
   github.com/mieubrisse/dotfiles:
     emoji: 🛠️
+  github.com/mieubrisse/investment-advisor:
+    emoji: 🤑
   github.com/mieubrisse/personal-writing:
     emoji: 📝
   github.com/mieubrisse/researcher:
