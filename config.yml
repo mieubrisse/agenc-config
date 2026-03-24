@@ -21,6 +21,11 @@ repoConfig:
   github.com/mieubrisse/todoist-manager:
     emoji: 💁‍♂️
     title: Assistant
+crons:
+  tell-time:
+    id: 5048c010-db8a-48c0-9dd6-c46d90ec64eb
+    schedule: "* * * * *"
+    prompt: Tell me the current time
 paletteCommands:
   refine:
     title: 👨‍🔬 Refine
