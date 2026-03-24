@@ -4,12 +4,17 @@ repoConfig:
     title: AgenC
     postUpdateHook: make setup
   github.com/mieubrisse/checklists-and-templates:
+    emoji: ✅
     title: Checklists & Templates
   github.com/mieubrisse/dotfiles:
     emoji: 🛠️
     title: Dotfiles
   github.com/mieubrisse/investment-advisor:
     emoji: 🤑
+    title: Investment Advisor
+  github.com/mieubrisse/lifeops-toolkit:
+    emoji: ⚙️
+    title: Lifeops
   github.com/mieubrisse/personal-writing:
     emoji: 📝
     title: Personal Writing
