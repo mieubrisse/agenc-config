@@ -1,46 +1,25 @@
 repoConfig:
   github.com/mieubrisse/agenc:
     emoji: 🚀
+    title: AgenC
     postUpdateHook: make setup
-  github.com/mieubrisse/calendar-manager:
-    emoji: 📅
-    trustedMcpServers:
-    - google-calendar
+  github.com/mieubrisse/checklists-and-templates:
+    title: Checklists & Templates
   github.com/mieubrisse/dotfiles:
     emoji: 🛠️
+    title: Dotfiles
   github.com/mieubrisse/investment-advisor:
     emoji: 🤑
   github.com/mieubrisse/personal-writing:
     emoji: 📝
-  github.com/mieubrisse/researcher:
-    emoji: 🔍
+    title: Personal Writing
   github.com/mieubrisse/todoist-manager:
-    emoji: ✅
+    emoji: 💁‍♂️
+    title: Assistant
 paletteCommands:
-  agenc-dev:
-    title: 🚀 Open AgenC
-    command: agenc mission new github.com/mieubrisse/agenc
-  calendarManager:
-    title: 📅  Open Calendar Manager
-    command: agenc mission new github.com/mieubrisse/calendar-manager
-  checklistsAndTemplates:
-    title: ✅ Open Checklists & Templates
-    command: agenc mission new github.com/mieubrisse/checklists-and-templates
-  dotfiles:
-    title: 🛠️   Open Dotfiles
-    command: agenc mission new github.com/mieubrisse/dotfiles
-  personalWriting:
-    title: 📝  Open Personal Writing
-    command: agenc mission new github.com/mieubrisse/personal-writing
   refine:
     title: 👨‍🔬 Refine
     description: Launch an Adjutant mission to refine lessons from the current mission
     command: agenc mission new --adjutant --prompt "In mission $AGENC_CALLING_MISSION_UUID I hit some friction and I want to make some refinements. I'm going to describe these friction points, and we can decide together how to roll this back into the system."
-  researcher:
-    title: 🔍  Researcher
-    command: agenc mission new github.com/mieubrisse/researcher
-  todoistManager:
-    title: ✅  Open Todoist Manager
-    command: agenc mission new github.com/mieubrisse/todoist-manager
 tmuxWindowTitle: {}
 defaultModel: opus
