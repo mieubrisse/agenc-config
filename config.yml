@@ -21,6 +21,9 @@ repoConfig:
   github.com/mieubrisse/todoist-manager:
     emoji: 💁‍♂️
     title: Assistant
+  github.com/mieubrisse/yappblocker:
+    emoji: 🚫
+    title: Yappblocker
 paletteCommands:
   refine:
     title: 👨‍🔬 Refine
