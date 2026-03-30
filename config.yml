@@ -24,6 +24,13 @@ repoConfig:
   github.com/mieubrisse/yappblocker:
     emoji: 🚫
     title: Yappblocker
+crons:
+  claude-news-processor:
+    id: 7c6d6398-82c4-4824-9b2d-a054a75c1c27
+    schedule: 0 9 * * 5
+    prompt: Read the Claude blog and process any new posts through the lens of my setup. Write findings to findings/YYYY-MM-DD.md and update notes.md.
+    description: Weekly scan of Claude blog for setup improvement opportunities
+    repo: github.com/mieubrisse/claude-news-processor
 paletteCommands:
   refine:
     title: 👨‍🔬 Refine
