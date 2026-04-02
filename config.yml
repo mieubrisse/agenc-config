@@ -24,8 +24,6 @@ repoConfig:
   github.com/mieubrisse/substack-sovereign:
     emoji: 👑
     title: Substack Sovereign
-    claudeArgs:
-    - --chrome
   github.com/mieubrisse/todoist-manager:
     emoji: 💁‍♂️
     title: Assistant
