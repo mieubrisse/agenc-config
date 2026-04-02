@@ -15,6 +15,9 @@ repoConfig:
   github.com/mieubrisse/lifeops-toolkit:
     emoji: ⚙️
     title: Lifeops
+  github.com/mieubrisse/mieubrisse:
+    emoji: 👤
+    title: My Github Profile
   github.com/mieubrisse/personal-writing:
     emoji: 📝
     title: Personal Writing
