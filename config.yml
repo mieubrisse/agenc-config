@@ -24,7 +24,6 @@ repoConfig:
   github.com/mieubrisse/substack-sovereign:
     emoji: 👑
     title: Substack Sovereign
-    postUpdateHook: pnpm install
   github.com/mieubrisse/todoist-manager:
     emoji: 💁‍♂️
     title: Assistant
