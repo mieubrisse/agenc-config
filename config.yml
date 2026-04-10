@@ -3,6 +3,9 @@ repoConfig:
     emoji: 🚀
     title: AgenC
     postUpdateHook: make setup
+  github.com/mieubrisse/alembiq:
+    emoji: ⚗️
+    title: Alembiq
   github.com/mieubrisse/checklists-and-templates:
     emoji: ✅
     title: Checklists & Templates
