@@ -24,6 +24,9 @@ repoConfig:
   github.com/mieubrisse/personal-writing:
     emoji: 📝
     title: Personal Writing
+  github.com/mieubrisse/saas-template:
+    emoji: 📄
+    title: SaaS Template
   github.com/mieubrisse/substack-sovereign:
     emoji: 👑
     title: Substack Sovereign
