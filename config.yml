@@ -6,6 +6,8 @@ repoConfig:
   github.com/mieubrisse/alembiq:
     emoji: ⚗️
     title: Alembiq
+    trustedMcpServers:
+    - polar
   github.com/mieubrisse/checklists-and-templates:
     emoji: ✅
     title: Checklists & Templates
