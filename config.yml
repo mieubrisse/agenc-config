@@ -61,5 +61,5 @@ sleepMode:
     - fri
     - sat
     - sun
-    start: "21:45"
+    start: "20:45"
     end: "06:00"
