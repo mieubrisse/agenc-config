@@ -12,8 +12,10 @@ repoConfig:
     emoji: ✅
     title: Checklists & Templates
   github.com/mieubrisse/dotfiles:
+    alwaysSynced: true
     emoji: 🛠️
     title: Dotfiles
+    writeableCopy: /Users/odyssey/app/dotfiles
   github.com/mieubrisse/investment-advisor:
     emoji: 🤑
     title: Investment Advisor
