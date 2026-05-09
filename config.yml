@@ -4,10 +4,12 @@ repoConfig:
     title: AgenC
     postUpdateHook: make setup
   github.com/mieubrisse/alembiq:
+    alwaysSynced: true
     emoji: ⚗️
     title: Alembiq
     trustedMcpServers:
     - polar
+    writeableCopy: /Users/odyssey/code/alembiq
   github.com/mieubrisse/checklists-and-templates:
     emoji: ✅
     title: Checklists & Templates
