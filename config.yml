@@ -18,6 +18,10 @@ repoConfig:
     emoji: 🛠️
     title: Dotfiles
     writeableCopy: /Users/odyssey/app/dotfiles
+  github.com/mieubrisse/exobrain:
+    alwaysSynced: true
+    title: Exobrain
+    writeableCopy: /Users/odyssey/app/exobrain
   github.com/mieubrisse/investment-advisor:
     emoji: 🤑
     title: Investment Advisor
