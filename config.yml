@@ -20,6 +20,7 @@ repoConfig:
     writeableCopy: /Users/odyssey/app/dotfiles
   github.com/mieubrisse/exobrain:
     alwaysSynced: true
+    emoji: 🧠
     title: Exobrain
     writeableCopy: /Users/odyssey/app/exobrain
   github.com/mieubrisse/investment-advisor:
