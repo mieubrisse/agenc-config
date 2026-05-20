@@ -54,6 +54,11 @@ crons:
     prompt: Read the Claude blog and process any new posts through the lens of my setup. Write findings to findings/YYYY-MM-DD.md and update notes.md.
     description: Weekly scan of Claude blog for setup improvement opportunities
     repo: github.com/mieubrisse/claude-news-processor
+  daily-state-summary:
+    id: 04af416d-5fb0-4bac-81e8-a57633aa862e
+    schedule: 30 23 * * *
+    prompt: You were spawned by the daily-state-summary cron. Invoke the daily-state-summary subagent via the Agent tool (subagent_type=daily-state-summary) to ensure today's state-summary entry exists in the AI journal at ~/app/exobrain/ai-journal/. The subagent is idempotent — if today's entry already exists, it will no-op. After the subagent returns, exit.
+    description: Nightly factual snapshot of the day, written to the AI journal at 23:30. Safeguard against /end-of-day-review not running.
   hn-daily-pull:
     id: fd227c03-7f1e-46b2-9a5f-29776f854f75
     schedule: 0 2 * * *
