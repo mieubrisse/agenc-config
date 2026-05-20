@@ -54,6 +54,11 @@ crons:
     prompt: Read the Claude blog and process any new posts through the lens of my setup. Write findings to findings/YYYY-MM-DD.md and update notes.md.
     description: Weekly scan of Claude blog for setup improvement opportunities
     repo: github.com/mieubrisse/claude-news-processor
+  hn-daily-pull:
+    id: fd227c03-7f1e-46b2-9a5f-29776f854f75
+    schedule: 0 2 * * *
+    prompt: You were spawned by the hn-daily-pull cron. Invoke the /hacker-news-daily-pull skill and follow it end-to-end.
+    description: Nightly Hacker News personalized digest, posted as an AgenC notification
   verify-composio-denylist:
     id: 2f1c1cf5-76ad-4cbd-8fcc-5446ffbd49aa
     schedule: 0 5 13 * *
