@@ -57,8 +57,8 @@ crons:
   daily-state-summary:
     id: 04af416d-5fb0-4bac-81e8-a57633aa862e
     schedule: 30 23 * * *
-    prompt: You were spawned by the daily-state-summary cron. Invoke the daily-state-summary subagent via the Agent tool (subagent_type=daily-state-summary) to ensure today's state-summary entry exists in the AI journal at ~/app/exobrain/ai-journal/. The subagent is idempotent — if today's entry already exists, it will no-op. After the subagent returns, exit.
-    description: Nightly factual snapshot of the day, written to the AI journal at 23:30. Safeguard against /end-of-day-review not running.
+    prompt: You were spawned by the daily-state-summary cron. Invoke the /daily-state-summary skill and follow it end-to-end. The skill is the single writer of the daily-state-summary AI-journal artifact; it computes its own source-pulling window and writes the entry. After the skill returns, exit.
+    description: Nightly factual snapshot of the workday that just ended, written to the AI journal. Cron fires late (02:30 local at time of writing) and the skill computes its own source window — independent of `/end-of-day-review`, which captures Kevin's reflection separately.
   hn-daily-pull:
     id: fd227c03-7f1e-46b2-9a5f-29776f854f75
     schedule: 0 2 * * *
