@@ -65,6 +65,11 @@ crons:
     prompt: You were spawned by the daily-state-summary cron. Invoke the /daily-state-summary skill and follow it end-to-end. The skill is the single writer of the daily-state-summary AI-journal artifact; it computes its own source-pulling window and writes the entry. After the skill returns, exit.
     description: Nightly factual snapshot of the workday that just ended, written to the AI journal. Cron fires late (02:30 local at time of writing) and the skill computes its own source window — independent of `/end-of-day-review`, which captures Kevin's reflection separately.
     notificationsEnabled: false
+  exobrain-update:
+    id: 4d6b9cbe-30f5-4415-bab3-9870a187ffcd
+    schedule: 0 23 * * *
+    prompt: You were spawned by the exobrain-update cron. Invoke /exobrain-update and follow it end-to-end.
+    description: Nightly autonomous email to Yannik Zimmermann summarizing Kevin's automation / Claude-config developments since the last send. Skill owns the full pipeline incl. a two-redactor convergence gate; fails safe (notification, no send) on any redaction veto.
   hn-daily-pull:
     id: fd227c03-7f1e-46b2-9a5f-29776f854f75
     schedule: 0 2 * * *
