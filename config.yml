@@ -82,6 +82,8 @@ crons:
     prompt: Invoke the /verify-workspace-mcp-denylist skill to audit the workspace-mcp destructive-action protection against the live tool catalog. Stay silent on a clean result; post an AgenC notification on findings or anything blocking a clean check (see the skill's Fail Loudly section).
     description: Monthly audit of ~/.claude/hooks/workspace-mcp-action-denylist.txt and the inline guards in block-workspace-mcp-destructive-actions.sh against the live workspace-mcp tool catalog. Posts a notification only when action is needed.
 paletteCommands:
+  copyMissionUuid:
+    tmuxKeybinding: -n C-v
   refine:
     title: 👨‍🔬 Refine
     description: Launch an Adjutant mission to refine lessons from the current mission
