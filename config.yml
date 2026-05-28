@@ -48,6 +48,11 @@ repoConfig:
     emoji: 🚫
     title: Yappblocker
 crons:
+  arpan-claude-optimization-suggestions:
+    id: 72efab32-c0f7-4d93-9257-2b07f13ebb9e
+    schedule: 0 13 * * 5
+    prompt: It's time for this week's Claude Code optimization review. Invoke the /arpan-claude-optimization-suggestions skill — it encodes the full workflow (ingest the arps18 blog, survey the user's ~/.claude/ setup, generate 10 proposals, rank top 3, present in this mission, post a notification doorbell).
+    description: "Weekly: read arps18 Claude Code Mastery blog + ~/.claude/, propose 10 improvements, present top 3 in-mission, post notification"
   claude-news-processor:
     id: 7c6d6398-82c4-4824-9b2d-a054a75c1c27
     schedule: 0 9 * * 5
