@@ -63,7 +63,7 @@ crons:
     id: 04af416d-5fb0-4bac-81e8-a57633aa862e
     schedule: 30 23 * * *
     prompt: You were spawned by the daily-state-summary cron. Invoke the /daily-state-summary skill and follow it end-to-end. The skill is the single writer of the daily-state-summary AI-journal artifact; it computes its own source-pulling window and writes the entry. After the skill returns, exit.
-    description: Nightly factual snapshot of the workday that just ended, written to the AI journal. Cron fires late (02:30 local at time of writing) and the skill computes its own source window — independent of `/end-of-day-review`, which captures Kevin's reflection separately.
+    description: Nightly factual snapshot of the workday that just ended, written to the AI journal at 23:30 local. The skill computes its own source window (since the previous entry's write-time, with a 24h fallback) — robust to laptop-sleep catchups and missed days. Independent of `/end-of-day-review`, which captures Kevin's reflection separately.
     notificationsEnabled: false
   exobrain-update:
     id: 4d6b9cbe-30f5-4415-bab3-9870a187ffcd
