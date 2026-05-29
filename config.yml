@@ -83,7 +83,7 @@ crons:
     description: Monthly audit of ~/.claude/hooks/workspace-mcp-action-denylist.txt and the inline guards in block-workspace-mcp-destructive-actions.sh against the live workspace-mcp tool catalog. Posts a notification only when action is needed.
 paletteCommands:
   copyMissionUuid:
-    tmuxKeybinding: -n C-v
+    tmuxKeybinding: -n C-,
   refine:
     title: 👨‍🔬 Refine
     description: Launch an Adjutant mission to refine lessons from the current mission
