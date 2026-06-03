@@ -70,6 +70,7 @@ crons:
     schedule: 0 23 * * 4
     prompt: You were spawned by the exobrain-update cron. Invoke /exobrain-update and follow it end-to-end.
     description: Nightly autonomous email to Yannik Zimmermann summarizing Kevin's automation / Claude-config developments since the last send. Skill owns the full pipeline incl. a two-redactor convergence gate; fails safe (notification, no send) on any redaction veto.
+    notificationsEnabled: false
   hn-daily-pull:
     id: fd227c03-7f1e-46b2-9a5f-29776f854f75
     schedule: 0 2 * * *
