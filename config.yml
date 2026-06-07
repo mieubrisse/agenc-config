@@ -10,11 +10,7 @@ repoConfig:
     trustedMcpServers:
     - polar
     writeableCopy: /Users/odyssey/code/alembiq
-  github.com/mieubrisse/alembiq-skill-pack:
-    description: Generated from github.com/mieubrisse/alembiq (the source venture repo). File beads against the source alembiq repo, NOT against this one.
-  github.com/mieubrisse/checklists-and-templates:
-    emoji: ✅
-    title: Checklists & Templates
+  github.com/mieubrisse/alembiq-skill-pack: {}
   github.com/mieubrisse/dotfiles:
     alwaysSynced: true
     emoji: 🛠️
