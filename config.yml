@@ -24,6 +24,9 @@ repoConfig:
   github.com/mieubrisse/investment-advisor:
     emoji: 🤑
     title: Investment Advisor
+  github.com/mieubrisse/jeffreys-skills:
+    emoji: 🥷
+    title: Jeffrey's Skills
   github.com/mieubrisse/lifeops-toolkit:
     emoji: ⚙️
     title: Lifeops
