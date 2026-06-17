@@ -97,15 +97,15 @@ paletteCommands:
     description: Launch an Adjutant mission to refine lessons from the current mission
     command: agenc mission new --adjutant --prompt "In mission $AGENC_CALLING_MISSION_UUID I hit some friction and I want to make some refinements. I'm going to describe these friction points, and we can decide together how to roll this back into the system."
 tmuxWindowTitle: {}
-#sleepMode:
-#  windows:
-#  - days:
-#    - mon
-#    - tue
-#    - wed
-#    - thu
-#    - fri
-#    - sat
-#    - sun
-#    start: "21:30"
-#    end: "06:00"
+sleepMode:
+  windows:
+  - days:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+    - sat
+    - sun
+    start: "21:30"
+    end: "06:00"
