@@ -109,3 +109,4 @@ sleepMode:
     - sun
     start: "21:30"
     end: "06:00"
+attachedMissionLimit: 6
