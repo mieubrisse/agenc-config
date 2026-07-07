@@ -9,7 +9,6 @@ repoConfig:
     title: Alembiq
     trustedMcpServers:
     - polar
-    writeableCopy: /Users/odyssey/code/alembiq
   github.com/mieubrisse/alembiq-skill-pack: {}
   github.com/mieubrisse/dotfiles:
     alwaysSynced: true
