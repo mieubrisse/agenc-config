@@ -88,6 +88,12 @@ crons:
     schedule: 11 5 17 * *
     prompt: Invoke the /verify-workspace-mcp-denylist skill to audit the workspace-mcp destructive-action protection against the live tool catalog. Stay silent on a clean result; post an AgenC notification on findings or anything blocking a clean check (see the skill's Fail Loudly section).
     description: Monthly audit of ~/.claude/hooks/workspace-mcp-action-denylist.txt and the inline guards in block-workspace-mcp-destructive-actions.sh against the live workspace-mcp tool catalog. Posts a notification only when action is needed.
+  watch-claude-opus5:
+    id: e5f3fbd9-2385-4878-9f37-b0ae77e244ee
+    schedule: 0 10 * * *
+    prompt: "You are a one-shot version watcher running on Kevin's Mac.\n\nWHY THIS EXISTS: Kevin is holding off on upgrading his Claude Code CLI until Homebrew can install a version that includes Claude Opus 5. Opus 5 first ships in Claude Code 2.1.219; Homebrew is currently behind that (last seen offering 2.1.212). Detect the moment Homebrew can install a version >= 2.1.219, ping Kevin once, then remove yourself.\n\nSTEPS:\n1. Refresh the Homebrew catalog: run `brew update`.\n2. Read the version Homebrew would install for claude-code:\n   brew info --json=v2 claude-code | jq -r '.formulae[0].versions.stable // .casks[0].version'\n3. Compare it to 2.1.219 by semantic-version order (within the 2.1.x line this is just the patch integer: 212 < 219 < 220).\n\nTHEN exactly one branch:\n- Offered version >= 2.1.219: Opus 5 is installable. Post ONE notification, then self-remove:\n    agenc notification new --kind=tooling.claude_upgrade --title=\"Claude Opus 5 is now installable via Homebrew\" --body=\"brew now offers <VERSION> (>=2.1.219, the first release with Opus 5). Upgrade with: brew upgrade claude-code  — afterward re-run the verify-workspace-mcp-denylist check to confirm the destructive-action guardrail still fires.\"\n    agenc config cron rm watch-claude-opus5\n- brew errored or the version could not be parsed: FAIL LOUDLY — post ONE notification (--kind=tooling.claude_upgrade --title=\"Opus 5 Homebrew watch is broken — check manually\" --body describing what went wrong) and do NOT remove the cron, so it retries tomorrow.\n- Otherwise (offered version still < 2.1.219): do nothing, post no notification, stay silent.\n\nACCEPTANCE: On a run where brew offers >= 2.1.219, Kevin gets exactly one actionable notification AND `agenc cron ls` no longer lists watch-claude-opus5. On a not-yet run, zero notifications posted and the cron remains. Never post a still-waiting notification."
+    description: "One-shot: notify Kevin when Homebrew can install Claude Code >=2.1.219 (first Opus 5 release), then self-remove"
+    notificationsEnabled: false
 paletteCommands:
   copyMissionUuid:
     tmuxKeybinding: -n C-,
@@ -96,16 +102,16 @@ paletteCommands:
     description: Launch an Adjutant mission to refine lessons from the current mission
     command: agenc mission new --adjutant --prompt "In mission $AGENC_CALLING_MISSION_UUID I hit some friction and I want to make some refinements. I'm going to describe these friction points, and we can decide together how to roll this back into the system."
 tmuxWindowTitle: {}
-  #sleepMode:
-  #  windows:
-  #  - days:
-  #    - mon
-  #    - tue
-  #    - wed
-  #    - thu
-  #    - fri
-  #    - sat
-  #    - sun
-  #    start: "21:30"
-  #    end: "06:00"
+#sleepMode:
+#  windows:
+#  - days:
+#    - mon
+#    - tue
+#    - wed
+#    - thu
+#    - fri
+#    - sat
+#    - sun
+#    start: "21:30"
+#    end: "06:00"
 attachedMissionLimit: 6
