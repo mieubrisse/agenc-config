@@ -76,6 +76,7 @@ crons:
     schedule: 0 7 * * *
     prompt: You were spawned by the flight-watcher cron. Invoke the /flight-watcher skill and follow it end-to-end.
     description: Daily flight watchlist check — posts an AgenC notification only when a buy signal fires
+    enabled: false
     notificationsEnabled: false
   hn-daily-pull:
     id: fd227c03-7f1e-46b2-9a5f-29776f854f75
