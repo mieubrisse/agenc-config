@@ -32,6 +32,10 @@ repoConfig:
   github.com/mieubrisse/mieubrisse:
     emoji: 👤
     title: My Personal Github README
+  github.com/mieubrisse/mieubrisse.github.io:
+    emoji: 🌐
+    title: My Personal Website
+    description: "Kevin's personal website (kevintoday.com), hand-written HTML served via GitHub Pages from the master branch (CNAME: kevintoday.com)"
   github.com/mieubrisse/personal-writing:
     emoji: 📝
     title: Personal Writing
