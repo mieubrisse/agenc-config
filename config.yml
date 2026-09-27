@@ -51,6 +51,10 @@ repoConfig:
   github.com/mieubrisse/yappblocker:
     emoji: 🚫
     title: Yappblocker
+  github.com/mieubrisse/ynab-mcp:
+    emoji: 💰
+    title: YNAB MCP Server
+    description: Kevin's fork of the YNAB MCP server. Pass-through server exposing his YNAB budget to agents; the local clone at ~/app/ynab-mcp is the version pin used by ynab-assistant missions.
 crons:
   arpan-claude-optimization-suggestions:
     id: 72efab32-c0f7-4d93-9257-2b07f13ebb9e
