@@ -100,6 +100,14 @@ crons:
 paletteCommands:
   copyMissionUuid:
     tmuxKeybinding: -n C-,
+  fable:
+    title: 🧠  Fable
+    description: Creates a blank Fable mission in a new window
+    command: agenc mission new --blank --model fable
+  opus:
+    title: 🔮  Opus
+    description: Creates a blank Opus mission in a new window
+    command: agenc mission new --blank --model opus
   refine:
     title: 👨‍🔬 Refine
     description: Launch an Adjutant mission to refine lessons from the current mission
