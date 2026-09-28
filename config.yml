@@ -101,18 +101,15 @@ paletteCommands:
   copyMissionUuid:
     tmuxKeybinding: -n C-,
   fable:
-    title: 🧠  Fable
+    title: 🔮  Fable
     description: Creates a blank Fable mission in a new window
     command: agenc mission new --blank --model fable
-  opus:
-    title: 🔮  Opus
-    description: Creates a blank Opus mission in a new window
-    command: agenc mission new --blank --model opus
   refine:
     title: 👨‍🔬 Refine
     description: Launch an Adjutant mission to refine lessons from the current mission
     command: agenc mission new --adjutant --prompt "In mission $AGENC_CALLING_MISSION_UUID I hit some friction and I want to make some refinements. I'm going to describe these friction points, and we can decide together how to roll this back into the system."
 tmuxWindowTitle: {}
+defaultModel: opus
 sleepMode:
   windows:
   - days:
