@@ -10,6 +10,10 @@ repoConfig:
     trustedMcpServers:
     - polar
   github.com/mieubrisse/alembiq-skill-pack: {}
+  github.com/mieubrisse/brazilian-finance-automation:
+    emoji: 🇧🇷
+    title: Brazilian Finance Automation
+    description: GitHub Action syncing Kevin's Nubank + Itaú transactions into his BRL YNAB plan via the Pluggy aggregator. Default branch is kevin-main (no main). See /brazilian-finance-automation and /pluggy-discord skills.
   github.com/mieubrisse/dotfiles:
     alwaysSynced: true
     emoji: 🛠️
