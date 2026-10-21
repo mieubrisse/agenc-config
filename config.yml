@@ -115,7 +115,7 @@ paletteCommands:
   reflect:
     title: 🌙  Reflect
     description: Start a journalling-only reflection session on the day
-    command: $HOME/app/dotfiles/claude/start-reflection-session.sh
+    command: "agenc mission new --blank --env REFLECTION_SESSION=1 --prompt \"It's reflection time — let's review my day. Invoke /end-of-day-review and follow it.\" -- --append-system-prompt \"$(cat $HOME/app/dotfiles/claude/reflection-system-prompt.md)\""
 tmuxWindowTitle: {}
 defaultModel: opus
 sleepMode:
